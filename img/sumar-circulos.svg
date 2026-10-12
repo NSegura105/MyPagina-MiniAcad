@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 260" width="500" height="260">
+  <rect width="500" height="260" fill="#ffffff" rx="16" stroke="#cbd5e1" stroke-width="2"/>
+  <g transform="translate(20,25)"><rect width="120" height="150" fill="#eff6ff" rx="12" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="60" cy="50" r="26" fill="#dc2626"/><circle cx="60" cy="110" r="26" fill="#dc2626"/></g>
+  <text x="80" y="228" text-anchor="middle" fill="#1e3a8a" font-size="36" font-weight="bold" font-family="Verdana,sans-serif">2</text>
+  <text x="165" y="118" text-anchor="middle" fill="#0d47a1" font-size="48" font-weight="bold" font-family="Verdana,sans-serif">+</text>
+  <g transform="translate(190,25)"><rect width="100" height="150" fill="#eff6ff" rx="12" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="50" cy="80" r="26" fill="#dc2626"/></g>
+  <text x="240" y="228" text-anchor="middle" fill="#1e3a8a" font-size="36" font-weight="bold" font-family="Verdana,sans-serif">1</text>
+  <text x="325" y="118" text-anchor="middle" fill="#0d47a1" font-size="48" font-weight="bold" font-family="Verdana,sans-serif">=</text>
+  <g transform="translate(360,25)"><rect width="120" height="150" fill="#f0fdf4" rx="12" stroke="#22c55e" stroke-width="2"/>
+    <circle cx="38" cy="50" r="22" fill="#dc2626"/><circle cx="82" cy="50" r="22" fill="#dc2626"/><circle cx="60" cy="100" r="22" fill="#dc2626"/></g>
+  <text x="420" y="228" text-anchor="middle" fill="#15803d" font-size="36" font-weight="bold" font-family="Verdana,sans-serif">3</text>
+</svg>

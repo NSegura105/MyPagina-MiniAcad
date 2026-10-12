@@ -1,0 +1,118 @@
+/* ==========================================================================
+   MINIACAD - HOJA DE ESTILOS RESPONSIVA
+   Garantiza adaptabilidad en celulares, tabletas y pantallas grandes
+   (Se carga DESPUÉS de estilos.css, por eso puede sobrescribir sus reglas)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CUADRÍCULA DE CURSOS: dos columnas amplias, una en celular
+      Evita que quede una tarjeta huérfana en la última fila.
+      Coincide con el atributo "sizes" de las imágenes del HTML.
+   -------------------------------------------------------------------------- */
+
+/* Tabletas y pantallas medianas: 2 columnas */
+@media (min-width: 600px) and (max-width: 1099px) {
+  .grid-cursos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Pantallas grandes: mantiene dos columnas para dar protagonismo a las imágenes */
+@media (min-width: 1100px) {
+  .grid-cursos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. TABLETAS Y MÓVILES (máximo 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .nav-principal ul {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .catalogo-seccion {
+    padding: 0 1rem 2rem;
+  }
+
+  .grid-cursos {
+    gap: 1.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. CELULARES (máximo 599px): una sola columna
+   -------------------------------------------------------------------------- */
+@media (max-width: 599px) {
+  .grid-cursos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. CELULARES PEQUEÑOS (máximo 480px)
+   El tamaño del texto NO se reduce: se mantiene en 18px (--tamano-cuerpo)
+   para cumplir el requisito de legibilidad infantil.
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .logo-sitio {
+    font-size: 1.75rem;
+  }
+
+  .nav-principal {
+    width: 100%;
+  }
+
+  .nav-principal ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-principal a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .tarjeta-curso {
+    padding: 1rem;
+  }
+
+  /* Botón a todo el ancho: más fácil de tocar con el dedo */
+  .btn-principal {
+    align-self: stretch;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. ORIENTACIÓN HORIZONTAL EN CELULAR (poca altura)
+   -------------------------------------------------------------------------- */
+@media (max-height: 480px) and (orientation: landscape) {
+  header {
+    padding: 0.5rem 1rem;
+  }
+
+  .hero {
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. ACCESIBILIDAD: PREFERENCIA DE MOVIMIENTO REDUCIDO
+   Ya está definida en estilos.css (sección 7), no se repite aquí.
+   -------------------------------------------------------------------------- */

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me cuido en internet - MiniAcad</title>
+    <meta name="description" content="Aprende consejos sencillos para navegar seguro, cuidar tus datos y pedir ayuda en internet.">
+    <meta name="theme-color" content="#0d47a1">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/responsivo.css">
+    <link rel="stylesheet" href="../css/curso.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+    <link rel="stylesheet" href="../css/player.css">
+</head>
+<body>
+
+    <a href="#contenido-curso" class="skip-link">Saltar al contenido del curso</a>
+
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo-sitio" aria-label="MiniAcad, ir al inicio">MiniAcad</a>
+            <nav class="nav-principal" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../aprendizaje.html">Mi aprendizaje</a></li>
+                    <li><a href="../IA.html">Uso de IA</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="curso-bg-wrapper fondo-internet">
+        <main id="contenido-curso" class="contenido-curso contenido-player" tabindex="-1">
+
+            <div class="barra-curso">
+                <h1 id="titulo-curso">¡Me cuido en internet! <span aria-hidden="true">🛡️</span></h1>
+                <a href="../aprendizaje.html" class="btn-salir"><span aria-hidden="true">←</span> Salir del curso</a>
+            </div>
+
+            <div class="player" data-player>
+                <aside class="ruta" aria-labelledby="titulo-ruta">
+                    <h2 id="titulo-ruta">Mi ruta <span aria-hidden="true">🧭</span></h2>
+                    <p class="ruta-insignia">Curso en progreso</p>
+                    <button type="button" class="ruta-toggle" aria-expanded="false" aria-controls="ruta-lista">
+                        <span class="ruta-toggle-texto">Mi ruta</span>
+                    </button>
+                    <div class="ruta-progreso">
+                        <progress max="3" value="0" aria-label="Lecciones completadas">0 de 3</progress>
+                        <p class="ruta-progreso-texto">0 de 3 lecciones completadas</p>
+                    </div>
+                    <ol class="ruta-lista" id="ruta-lista" data-abierta="true" aria-label="Lecciones del curso">
+                        <li><button type="button" class="ruta-item" data-paso="0">
+                            <span class="nodo" aria-hidden="true">1</span>
+                            <span class="ruta-texto"><span class="ruta-num">Lección 1</span><span class="ruta-nombre">Internet y seguridad</span><span class="ruta-estado"></span></span>
+                        </button></li>
+                        <li><button type="button" class="ruta-item" data-paso="1">
+                            <span class="nodo" aria-hidden="true">2</span>
+                            <span class="ruta-texto"><span class="ruta-num">Lección 2</span><span class="ruta-nombre">Mis datos son míos</span><span class="ruta-estado"></span></span>
+                        </button></li>
+                        <li><button type="button" class="ruta-item" data-paso="2">
+                            <span class="nodo" aria-hidden="true">3</span>
+                            <span class="ruta-texto"><span class="ruta-num">Lección 3</span><span class="ruta-nombre">Le cuento a una persona adulta</span><span class="ruta-estado"></span></span>
+                        </button></li>
+                        <li><button type="button" class="ruta-item" data-final>
+                            <span class="nodo" aria-hidden="true">🏁</span>
+                            <span class="ruta-texto"><span class="ruta-num">Al terminar</span><span class="ruta-nombre">Fin del curso</span><span class="ruta-estado"></span></span>
+                        </button></li>
+                    </ol>
+                </aside>
+
+                <div class="escena">
+                    <p class="player-anuncio solo-lectores" aria-live="polite"></p>
+
+                    <section class="paso" id="leccion-1" aria-labelledby="titulo-leccion-1">
+                        <span class="step-badge">Lección 1 de 3</span>
+                        <h2 id="titulo-leccion-1" tabindex="-1">¿Qué es internet y cómo usarlo con seguridad? <span aria-hidden="true">🌐</span></h2>
+                        <div class="bloque" data-titulo="Video">
+                            <h3>Mira el video <span aria-hidden="true">🎥</span></h3>
+                            <div class="video-contenedor">
+                                <iframe
+                                    src="https://www.youtube-nocookie.com/embed/Y4aM_f-E8_U?rel=0&amp;cc_load_policy=1&amp;hl=es&amp;cc_lang_pref=es"
+                                    title="Seguridad en Internet para niños"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    loading="lazy"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="nota-video">
+                                ¿No puedes ver el video? Lee la explicación de esta lección.
+                                <a href="https://www.youtube.com/watch?v=Y4aM_f-E8_U">Ver el video en YouTube.</a>
+                            </p>
+                        </div>
+                        <div class="bloque" data-titulo="Lectura">
+                            <h3>Una red para aprender y compartir <span aria-hidden="true">📖</span></h3>
+                            <div class="caja-leccion caja-texto">
+                                <p class="lectura">Internet conecta computadoras, tabletas y teléfonos. Podemos usarlo para aprender, jugar y hablar con otras personas. Igual que en la calle, hay que tomar precauciones: navega en páginas apropiadas para tu edad y sigue las reglas de tu familia.</p>
+                                <p class="nota-simbolo"><span class="nota-titulo">Regla principal:</span> <span class="nota-texto">Usa internet con el permiso y la orientación de una persona adulta de confianza.</span></p>
+                            </div>
+                        </div>
+                        <div class="bloque" data-titulo="Recuerda">
+                            <h3>Piensa antes de hacer clic</h3>
+                            <figure class="caja-leccion caja-grafica">
+                                <figcaption>Cuida tus datos, navega con cuidado y pide ayuda.</figcaption>
+                                <img src="../img/seguridad-internet.svg" width="760" height="360" loading="lazy" decoding="async"
+                                     alt="Ilustración de privacidad, navegación segura y ayuda de una persona adulta de confianza.">
+                            </figure>
+                        </div>
+                    </section>
+
+                    <section class="paso" id="leccion-2" aria-labelledby="titulo-leccion-2">
+                        <span class="step-badge">Lección 2 de 3</span>
+                        <h2 id="titulo-leccion-2" tabindex="-1">Mis datos son míos <span aria-hidden="true">🔒</span></h2>
+                        <div class="bloque" data-titulo="Video">
+                            <h3>Aprende a proteger tus datos <span aria-hidden="true">🎥</span></h3>
+                            <div class="video-contenedor">
+                                <iframe
+                                    src="https://www.youtube-nocookie.com/embed/Y4aM_f-E8_U?rel=0&amp;cc_load_policy=1&amp;hl=es&amp;cc_lang_pref=es"
+                                    title="Video de apoyo sobre seguridad en internet para niños"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    loading="lazy"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="nota-video">
+                                La lectura de esta lección explica cómo cuidar tus datos y pedir ayuda.
+                                <a href="https://www.youtube.com/watch?v=Y4aM_f-E8_U">Ver el video en YouTube.</a>
+                            </p>
+                        </div>
+                        <div class="bloque" data-titulo="Datos personales">
+                            <h3>Mantén privada tu información <span aria-hidden="true">🤫</span></h3>
+                            <div class="caja-leccion caja-texto">
+                                <p class="lectura">Tu nombre completo, dirección, escuela, teléfono, contraseñas y fotos personales son datos privados. No los publiques ni los envíes a personas que no conoces. Consulta siempre a un adulto de confianza antes de compartir información.</p>
+                            </div>
+                        </div>
+                        <div class="bloque" data-titulo="Contraseñas y mensajes">
+                            <h3>Contraseñas secretas y mensajes respetuosos <span aria-hidden="true">🔑</span></h3>
+                            <div class="caja-leccion caja-texto">
+                                <ul>
+                                    <li>Usa contraseñas difíciles de adivinar y no las compartas con otras personas.</li>
+                                    <li>Trata a los demás con respeto, igual que en persona.</li>
+                                    <li>No abras enlaces, archivos o mensajes inesperados sin preguntar primero a una persona adulta.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bloque" data-titulo="Pide ayuda">
+                            <h3>Si algo te incomoda, cuéntalo <span aria-hidden="true">🙋</span></h3>
+                            <div class="caja-leccion caja-texto">
+                                <p class="lectura">Si alguien te pide información o fotos, te escribe de forma incómoda, o aparece algo que te asusta, no respondas. Cierra la página y cuéntaselo enseguida a tu familia o a otra persona adulta de confianza. No es tu culpa y pueden ayudarte.</p>
+                            </div>
+                        </div>
+                        <div class="bloque" data-titulo="Ilustración">
+                            <h3>Tres hábitos para navegar con cuidado</h3>
+                            <figure class="caja-leccion caja-grafica">
+                                <figcaption>Protege tu privacidad y consulta con una persona adulta.</figcaption>
+                                <img src="../img/seguridad-internet.svg" width="760" height="360" loading="lazy" decoding="async"
+                                     alt="Una tarjeta privada, un escudo y una persona adulta representan hábitos para cuidarse en internet.">
+                            </figure>
+                        </div>
+                    </section>
+
+                    <section class="paso" id="leccion-3" aria-labelledby="titulo-leccion-3">
+                        <span class="step-badge">Lección 3 de 3</span>
+                        <h2 id="titulo-leccion-3" tabindex="-1">Le cuento a una persona adulta <span aria-hidden="true">🙋</span></h2>
+                        <div class="bloque" data-titulo="Video">
+                            <h3>Recuerda cuándo pedir ayuda <span aria-hidden="true">🎥</span></h3>
+                            <div class="video-contenedor">
+                                <iframe
+                                    src="https://www.youtube-nocookie.com/embed/Y4aM_f-E8_U?rel=0&amp;cc_load_policy=1&amp;hl=es&amp;cc_lang_pref=es"
+                                    title="Video de repaso sobre seguridad en internet para niños"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    loading="lazy"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="nota-video">
+                                Puedes leer las reglas de seguridad y responder la práctica.
+                                <a href="https://www.youtube.com/watch?v=Y4aM_f-E8_U">Ver el video en YouTube.</a>
+                            </p>
+                        </div>
+                        <div class="bloque" data-titulo="Antes de empezar">
+                            <h3>Repasemos las reglas de seguridad <span aria-hidden="true">📖</span></h3>
+                            <div class="caja-leccion caja-texto">
+                                <p class="lectura">Responde las 5 preguntas. Si aciertas 4 o más, apruebas la lección. Si algo te cuesta, puedes volver a repasar y probar de nuevo.</p>
+                            </div>
+                        </div>
+                        <div class="bloque" data-titulo="Imagen">
+                            <h3>Recuerda: un adulto de confianza puede ayudarte <span aria-hidden="true">🖼️</span></h3>
+                            <figure class="caja-leccion caja-grafica">
+                                <figcaption>Protege tus datos y pide ayuda si algo te preocupa.</figcaption>
+                                <img src="../img/seguridad-internet.svg" width="760" height="360" loading="lazy" decoding="async"
+                                     alt="Un escudo representa la seguridad y una persona adulta de confianza puede ayudar si algo preocupa.">
+                            </figure>
+                        </div>
+                        <div class="bloque quiz-card" data-titulo="Práctica">
+                            <h3 id="titulo-quiz" tabindex="-1">Práctica: navegante seguro <span aria-hidden="true">🛡️</span></h3>
+                            <p class="quiz-intro">Elige la respuesta más segura para cada situación.</p>
+                            <noscript><p class="quiz-sin-js">Para responder la evaluación necesitas activar JavaScript en tu navegador.</p></noscript>
+                            <div id="quiz" data-quiz></div>
+                            <script type="application/json" id="quiz-datos">
+                            {
+                                "aprueba": 4,
+                                "foco": "titulo-quiz",
+                                "felicitacion": "¡Felicitaciones! Ya sabes cómo cuidarte en internet. Tu lección tiene su chulito.",
+                                "repaso": {
+                                    "paso": 0,
+                                    "texto": "Repasar las reglas de seguridad"
+                                },
+                                "preguntas": [
+                                    {
+                                        "dibujo": "🔒",
+                                        "pregunta": "¿Qué haces con tu dirección y tu contraseña?",
+                                        "opciones": ["Las mantengo privadas", "Las publico para todos", "Se las envío a desconocidos"],
+                                        "correcta": 0,
+                                        "explicacion": "La dirección y la contraseña son datos privados."
+                                    },
+                                    {
+                                        "dibujo": "🙋",
+                                        "pregunta": "¿Qué haces si un mensaje te hace sentir incómodo?",
+                                        "opciones": ["Se lo cuento a una persona adulta de confianza", "Respondo con mis datos", "Lo guardo en secreto"],
+                                        "correcta": 0,
+                                        "explicacion": "Una persona adulta de confianza puede ayudarte."
+                                    },
+                                    {
+                                        "dibujo": "🔗",
+                                        "pregunta": "Te llega un enlace inesperado. ¿Qué haces?",
+                                        "opciones": ["Pregunto a una persona adulta antes de abrirlo", "Lo abro enseguida", "Lo comparto con todos"],
+                                        "correcta": 0,
+                                        "explicacion": "Consulta antes de abrir enlaces o archivos inesperados."
+                                    },
+                                    {
+                                        "dibujo": "💬",
+                                        "pregunta": "¿Cómo debes tratar a otras personas en internet?",
+                                        "opciones": ["Con respeto", "Con burlas", "Como si no fueran personas"],
+                                        "correcta": 0,
+                                        "explicacion": "Las personas merecen respeto tanto en línea como en persona."
+                                    },
+                                    {
+                                        "dibujo": "👨‍👩‍👧",
+                                        "pregunta": "¿Con quién debes usar internet y pedir orientación?",
+                                        "opciones": ["Con una persona adulta de confianza", "Con cualquier desconocido", "Sin contarle a nadie"],
+                                        "correcta": 0,
+                                        "explicacion": "Tu familia u otra persona adulta de confianza puede orientarte."
+                                    }
+                                ]
+                            }
+                            </script>
+                        </div>
+                    </section>
+
+                    <section class="curso-completo" aria-labelledby="titulo-final" hidden>
+                        <div class="sello" aria-hidden="true">✓</div>
+                        <h2 id="titulo-final" tabindex="-1">¡Completaste el curso!</h2>
+                        <p>Terminaste las lecciones y aprobaste la práctica. Recuerda navegar con cuidado y pedir ayuda a una persona adulta cuando lo necesites.</p>
+                        <a href="../aprendizaje.html" class="btn-principal">Salir del curso</a>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MiniAcad · Proyecto de CSS Essentials (Cisco Networking Academy)</p>
+        <p><a href="../IA.html">Documentación del uso de Inteligencia Artificial</a></p>
+    </footer>
+
+    <script src="../js/script.js" defer></script>
+    <script src="../js/curso.js" defer></script>
+    <script src="../js/quiz.js" defer></script>
+</body>
+</html>

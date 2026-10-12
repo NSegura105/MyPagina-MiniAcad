@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Tres hábitos para cuidarse en internet</title>
+  <desc id="descripcion">Una tarjeta de privacidad, un escudo de seguridad y una persona adulta de confianza representan hábitos para navegar con cuidado.</desc>
+  <rect width="760" height="360" rx="28" fill="#fff"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle" fill="#183153">
+    <text x="380" y="49" font-size="25" font-weight="700">Tres hábitos para navegar con cuidado</text>
+    <text x="145" y="303" font-size="18" font-weight="700">Cuida tus datos</text>
+    <text x="380" y="303" font-size="18" font-weight="700">Piensa antes de hacer clic</text>
+    <text x="615" y="303" font-size="18" font-weight="700">Pide ayuda</text>
+  </g>
+  <g transform="translate(90 90)">
+    <rect x="0" y="0" width="110" height="145" rx="14" fill="#fff" stroke="#2563eb" stroke-width="6"/>
+    <circle cx="55" cy="42" r="20" fill="#dbeafe"/>
+    <path d="M28 112c4-26 50-26 54 0" fill="#dbeafe" stroke="#2563eb" stroke-width="5"/>
+    <path d="M40 78h30M40 91h30" stroke="#94a3b8" stroke-linecap="round" stroke-width="5"/>
+  </g>
+  <g transform="translate(323 84)">
+    <path d="M57 5 112 27v45c0 41-26 70-55 87C28 142 2 113 2 72V27z" fill="#eff6ff" stroke="#2563eb" stroke-width="7" stroke-linejoin="round"/>
+    <path d="m31 77 18 19 38-43" fill="none" stroke="#15803d" stroke-linecap="round" stroke-linejoin="round" stroke-width="11"/>
+  </g>
+  <g transform="translate(560 94)">
+    <circle cx="55" cy="35" r="24" fill="#f1c7a5" stroke="#183153" stroke-width="4"/>
+    <path d="M20 139c1-45 15-70 35-70s34 25 35 70" fill="#dbeafe" stroke="#183153" stroke-width="5"/>
+    <path d="M22 139h67M39 33h1m30 0h1" stroke="#183153" stroke-linecap="round" stroke-width="5"/>
+    <path d="M48 48q7 7 14 0" fill="none" stroke="#183153" stroke-linecap="round" stroke-width="4"/>
+  </g>
+</svg>

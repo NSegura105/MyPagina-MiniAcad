@@ -1,0 +1,62 @@
+EVIDENCIAS DE ACCESIBILIDAD
+===========================
+
+La carpeta ya contiene cuatro capturas para la navegación con teclado:
+teclado-inicio.png, teclado-aprendizaje.png, teclado-curso.png y
+teclado-avance-leccion.png. Comprueba que correspondan a la versión final y
+que muestren claramente el foco visible.
+
+Todavía debes completar la prueba real con lector de pantalla, la auditoría
+automática y la verificación de contraste. No registres resultados que no
+hayan sido comprobados.
+
+1. NAVEGACIÓN CON TECLADO
+   Abre index.html y recorre el sitio con Tab, Shift+Tab, Enter y las flechas
+   de los controles. Repite en aprendizaje.html y en cada curso. Confirma que
+   el foco siempre se ve, que el enlace "Saltar al contenido" funciona y que
+   puedes avanzar entre partes, lecciones y el cuestionario. Guarda capturas
+   reales del foco visible dentro de esta carpeta si las actuales no cubren
+   esos casos.
+
+2. LECTOR DE PANTALLA
+   Instala y ejecuta NVDA en Windows. Abre un curso y escucha una lección
+   completa: título, lectura, texto alternativo de la imagen, controles y
+   avance. Usa el teclado para moverte mientras escuchas. Anota qué se entendió
+   y qué tuvo que corregirse en un archivo de texto dentro de esta carpeta.
+   Navegar con teclado sin NVDA no sustituye esta prueba.
+
+3. AUDITORÍA AUTOMÁTICA
+   Ejecuta Lighthouse (informe de Accesibilidad) o WAVE sobre el sitio
+   publicado. Guarda una captura del resultado e intenta alcanzar 90 o más.
+   Corrige los problemas y vuelve a ejecutar la auditoría. Las páginas locales
+   file:// pueden limitar las herramientas; publica primero el sitio si hace
+   falta. No se ha medido ni se afirma ningún puntaje en este momento.
+
+4. CONTRASTE CON WEBAIM
+   Verifica cada combinación de texto y fondo utilizada en
+   https://webaim.org/resources/contrastchecker/ y guarda una captura. La
+   rúbrica exige al menos 4.5:1 para texto normal y 3:1 para texto grande.
+   Estas relaciones preliminares se calcularon localmente a partir de los
+   colores del CSS; todavía deben verificarse en WebAIM:
+
+   Texto blanco #FFFFFF sobre azul principal #0D47A1: 8.63:1
+   Texto blanco #FFFFFF sobre azul hover #1565C0: 5.75:1
+   Texto blanco #FFFFFF sobre verde #1B5E20: 7.87:1
+   Texto blanco #FFFFFF sobre verde hover #2E7D32: 5.13:1
+   Texto #111827 sobre blanco #FFFFFF: 17.74:1
+   Texto #374151 sobre blanco #FFFFFF: 10.31:1
+   Foco #BF360C sobre blanco #FFFFFF: 5.60:1
+   Foco #FFE082 sobre azul principal #0D47A1: 6.67:1
+
+   Si encuentras otras combinaciones en los cursos o en estados hover,
+   focus, error y éxito, añádelas a la tabla de contraste y compruébalas.
+
+Nombra cada captura claramente, por ejemplo:
+teclado-inicio.png
+teclado-curso.png
+nvda-leccion-suma.txt
+lighthouse-accesibilidad.png
+contraste-webaim.png
+
+Las relaciones anteriores son un cálculo local orientativo; no sustituyen
+las capturas de WebAIM ni las pruebas de teclado y lector de pantalla.

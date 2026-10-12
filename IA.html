@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registro transparente del uso de inteligencia artificial en el proyecto MiniAcad.">
+    <title>Uso de inteligencia artificial - MiniAcad</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <link rel="stylesheet" href="css/ia.css">
+</head>
+<body>
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-sitio" aria-label="MiniAcad, ir al inicio">MiniAcad</a>
+            <nav class="nav-principal" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="aprendizaje.html">Mi aprendizaje</a></li>
+                    <li><a href="IA.html" aria-current="page">Uso de IA</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido-principal" class="pagina-ia">
+        <header class="ia-encabezado">
+            <h1>Uso de inteligencia artificial</h1>
+            <p>Registro de solicitudes, aportes y decisiones para desarrollar MiniAcad.</p>
+        </header>
+
+        <section class="ia-nota" aria-labelledby="titulo-transparencia">
+            <h2 id="titulo-transparencia">Transparencia del registro</h2>
+            <p>Se usó Copilot en VS Code como apoyo durante el desarrollo de MiniAcad.</p>
+            <p>Las cuatro portadas del catálogo fueron proporcionadas por el estudiante. Las ilustraciones de ejemplo se hicieron como SVG locales; no se generaron con una herramienta de imágenes. Cuando se pidió arte generado por IA, se usaron ilustraciones SVG de ejemplo en su lugar.</p>
+        </section>
+
+        <section class="ia-nota ia-aportes" aria-labelledby="titulo-aportes">
+            <h2 id="titulo-aportes">Aportes del estudiante y de la inteligencia artificial</h2>
+            <div class="aportes-grid">
+                <article class="aporte-card">
+                    <h3>Mi trabajo</h3>
+                    <p>Propuse la idea, el contenido y los videos de MiniAcad. Elegí la paleta de colores, las imágenes de los cursos y la dirección general del diseño. Revisé el sitio, señalé errores y pedí los cambios necesarios.</p>
+                </article>
+                <article class="aporte-card aporte-ia">
+                    <h3>Apoyo de la IA</h3>
+                    <p>Copilot me ayudó a construir la estructura HTML, los estilos CSS, la programación JavaScript, los cuestionarios y otros componentes técnicos, siguiendo las ideas y correcciones que le indiqué.</p>
+                </article>
+            </div>
+            <p class="aportes-cierre">Durante el desarrollo, decidí qué propuestas de diseño conservar.</p>
+        </section>
+
+        <section class="ia-registro" aria-labelledby="titulo-registro">
+            <h2 id="titulo-registro">Registro de cinco solicitudes</h2>
+            <div class="tabla-contenedor" role="region" aria-label="Registro de uso de inteligencia artificial" tabindex="0">
+                <table>
+                    <caption>Prompts y solicitudes para desarrollar MiniAcad, junto con sus aportes y cambios aplicados</caption>
+                    <colgroup>
+                        <col class="col-numero">
+                        <col class="col-solicitud">
+                        <col class="col-herramienta">
+                        <col class="col-aporte">
+                        <col class="col-cambio">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">N.º</th>
+                            <th scope="col">Prompt</th>
+                            <th scope="col">Herramienta</th>
+                            <th scope="col">Qué aportó la respuesta</th>
+                            <th scope="col">Qué se modificó en MiniAcad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>
+                                <blockquote class="prompt-texto">Ayúdame a corregir errores sin reemplazar la base que ya construí para MiniAcad, mi plataforma de cursos para niños. Conserva la estructura y el estilo de los cursos de suma y división, y mejora los cursos de seguridad en Internet y de amarrarse los zapatos para que tengan una presentación coherente con los demás.</blockquote>
+                            </td>
+                            <td>Copilot en VS Code</td>
+                            <td>Revisar los cursos de Internet y de amarrarse los zapatos para que sigan el reproductor y la organización de los cursos de matemáticas.</td>
+                            <td>Se conservaron los archivos existentes y se adaptaron los dos cursos al reproductor compartido, con tres pasos, controles de avance y cuestionario.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>
+                                <blockquote class="prompt-texto">Mejora la claridad, la coherencia visual y la usabilidad de MiniAcad sin perder el diseño existente. Simplifica las explicaciones de bienvenida y de «Mi aprendizaje»; en los cursos, coloca la explicación antes de la imagen. Revisa posibles errores y completa las ilustraciones, especialmente en el curso de división. Mantén una paleta uniforme, fondos blancos en las lecciones y tipografías legibles. Evita depender solo de emojis y conserva un estilo limpio, profesional y adecuado para una entrega académica.</blockquote>
+                            </td>
+                            <td>Copilot en VS Code</td>
+                            <td>Reducir instrucciones innecesarias, unificar estilos y ordenar la lectura y los ejemplos de los cursos.</td>
+                            <td>Se simplificaron las introducciones, se ajustó la presentación de los cursos y se ordenó el contenido para mostrar la explicación antes de su ilustración.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>
+                                <blockquote class="prompt-texto">Quiero definir el diseño visual de MiniAcad y elegir personalmente las imágenes de los cursos. Ayúdame a incorporar las imágenes que te proporcione en las secciones correspondientes.</blockquote>
+                            </td>
+                            <td>Copilot en VS Code</td>
+                            <td>Incorporar las imágenes que el estudiante eligiera para representar los cursos.</td>
+                            <td>El estudiante proporcionó las cuatro portadas y se conectaron con el catálogo local de cursos.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>
+                                <blockquote class="prompt-texto">Mejora la presentación de los cursos para que sea profesional, atractiva y fácil de leer. Usa tipografías cuidadas y una jerarquía clara en los títulos; elimina mensajes innecesarios sobre abrir pestañas. Utiliza ilustraciones de ejemplo distintas de las portadas y ajusta los cuestionarios para que las respuestas extensas tengan suficiente espacio y se lean con comodidad, sin perder la funcionalidad ni la coherencia visual del sitio.</blockquote>
+                            </td>
+                            <td>Copilot en VS Code</td>
+                            <td>Mejorar jerarquía visual, separar portadas de ejemplos y asegurar que las respuestas largas se lean con comodidad.</td>
+                            <td>Se añadieron ilustraciones locales distintas de las portadas y se ajustó el cuestionario para que sus opciones ocupen el ancho disponible y permitan ajustar el texto. Las ilustraciones son SVG, no imágenes generadas por IA.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>
+                                <blockquote class="prompt-texto">Asigna las cuatro imágenes que envié a sus cursos correspondientes: la primera, con la operación 1 + 2 = 3, es para suma; la segunda, para división; la tercera, para amarrarse los zapatos; y la cuarta, para seguridad en Internet.</blockquote>
+                            </td>
+                            <td>Copilot en VS Code</td>
+                            <td>Relacionar cada una de las imágenes compartidas con su curso correspondiente.</td>
+                            <td>Se asignaron las cuatro imágenes del estudiante a suma, división, zapatos e Internet, en ese orden.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <nav class="ia-retorno" aria-label="Navegación de retorno">
+            <a class="btn-principal" href="aprendizaje.html">Volver a Mi aprendizaje</a>
+        </nav>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MiniAcad · Proyecto de CSS Essentials (Cisco Networking Academy)</p>
+        <p><a href="IA.html" aria-current="page">Documentación del uso de Inteligencia Artificial</a></p>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>

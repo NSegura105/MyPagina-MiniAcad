@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Seis galletas repartidas en dos platos</title>
+  <desc id="descripcion">Dos platos contienen tres galletas cada uno. Seis dividido entre dos es igual a tres.</desc>
+  <rect width="760" height="360" rx="28" fill="#fff"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle" fill="#183153">
+    <text x="380" y="50" font-size="25" font-weight="700">Repartimos en partes iguales</text>
+    <text x="380" y="326" font-size="27" font-weight="700">6 ÷ 2 = 3</text>
+    <text x="190" y="287" font-size="19">3 galletas</text>
+    <text x="570" y="287" font-size="19">3 galletas</text>
+  </g>
+  <g fill="#f8fafc" stroke="#8aa1b8" stroke-width="5">
+    <ellipse cx="190" cy="218" rx="125" ry="47"/>
+    <ellipse cx="570" cy="218" rx="125" ry="47"/>
+  </g>
+  <g fill="#d99a57" stroke="#9a5a29" stroke-width="3">
+    <circle cx="145" cy="174" r="31"/><circle cx="190" cy="150" r="31"/><circle cx="235" cy="174" r="31"/>
+    <circle cx="525" cy="174" r="31"/><circle cx="570" cy="150" r="31"/><circle cx="615" cy="174" r="31"/>
+  </g>
+  <g fill="#5b351f">
+    <circle cx="134" cy="165" r="3.5"/><circle cx="152" cy="181" r="3.5"/><circle cx="151" cy="160" r="3.5"/>
+    <circle cx="180" cy="143" r="3.5"/><circle cx="200" cy="157" r="3.5"/><circle cx="195" cy="138" r="3.5"/>
+    <circle cx="226" cy="165" r="3.5"/><circle cx="240" cy="181" r="3.5"/><circle cx="244" cy="160" r="3.5"/>
+    <circle cx="514" cy="165" r="3.5"/><circle cx="532" cy="181" r="3.5"/><circle cx="531" cy="160" r="3.5"/>
+    <circle cx="560" cy="143" r="3.5"/><circle cx="580" cy="157" r="3.5"/><circle cx="575" cy="138" r="3.5"/>
+    <circle cx="606" cy="165" r="3.5"/><circle cx="620" cy="181" r="3.5"/><circle cx="624" cy="160" r="3.5"/>
+  </g>
+  <path d="M348 190h64m-18-18 18 18-18 18" fill="none" stroke="#2563eb" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+</svg>

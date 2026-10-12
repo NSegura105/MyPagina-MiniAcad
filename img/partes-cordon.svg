@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Partes del cordón y del zapato</title>
+  <desc id="descripcion">Un zapato azul muestra el cordón, sus puntas y los ojales.</desc>
+  <rect width="760" height="360" rx="24" fill="#f4f8ff"/>
+  <path d="M100 235c58-5 91-45 116-104l77 16c18 45 49 75 110 88l190 37c29 6 47 30 39 53-7 19-27 28-57 28H141c-38 0-61-24-55-58 2-23 7-42 14-60Z" fill="#dbeafe" stroke="#174ea6" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M286 151c21 35 51 61 93 79m-67-85c24 33 56 57 100 73m-170-54 61 10m-80 22 85 12" fill="none" stroke="#174ea6" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="290" cy="153" r="8" fill="#fff" stroke="#174ea6" stroke-width="5"/>
+  <circle cx="313" cy="170" r="8" fill="#fff" stroke="#174ea6" stroke-width="5"/>
+  <circle cx="337" cy="187" r="8" fill="#fff" stroke="#174ea6" stroke-width="5"/>
+  <path d="M304 164c19-13 35-15 49-6m-28 25c19-13 35-15 49-6" fill="none" stroke="#d0443e" stroke-width="6" stroke-linecap="round"/>
+  <path d="M354 158 470 94M376 184 487 184M304 164 202 88" fill="none" stroke="#334155" stroke-width="3" stroke-dasharray="7 7"/>
+  <rect x="438" y="50" width="245" height="58" rx="16" fill="#fff" stroke="#174ea6" stroke-width="3"/>
+  <text x="560" y="87" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" fill="#123b75">CORDÓN</text>
+  <rect x="488" y="153" width="195" height="58" rx="16" fill="#fff" stroke="#174ea6" stroke-width="3"/>
+  <text x="585" y="190" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" fill="#123b75">OJALES</text>
+  <rect x="65" y="45" width="250" height="58" rx="16" fill="#fff" stroke="#174ea6" stroke-width="3"/>
+  <text x="190" y="82" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" fill="#123b75">PUNTAS DEL CORDÓN</text>
+</svg>

@@ -1,0 +1,14 @@
+PRUEBA CON LECTOR DE PANTALLA: NVDA
+===================================
+
+Curso probado: Aprendo a sumar
+Fecha: 11 de octubre de 2026
+
+Resultado observado:
+- El audio se escucha con claridad.
+- La navegación con la tecla Tab funciona.
+- El contenido se entiende.
+
+Observaciones adicionales:
+No se reportaron problemas durante la prueba.
+     

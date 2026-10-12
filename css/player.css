@@ -1,0 +1,614 @@
+/* ==========================================================================
+   MINIACAD - REPRODUCTOR DE CURSO (css/player.css)
+   Se carga DESPUÉS de curso.css y quiz.css. Funciona con js/curso.js.
+   Idea propia de MiniAcad: en vez de un "índice" aburrido, el menú lateral
+   es "MI RUTA": un camino con paradas (nodos) unidas por una línea punteada.
+   Cada parada gana un chulito verde ✓ cuando la lección se completa.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. BARRA SUPERIOR DEL CURSO (salir + título)
+   -------------------------------------------------------------------------- */
+.contenido-curso.contenido-player {
+  max-width: 1440px;
+}
+
+.barra-curso {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  margin-bottom: 1.25rem;
+  padding: 1rem clamp(1rem, 3vw, 1.75rem);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 6px solid var(--color-primario);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.barra-curso h1 {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.3rem, 4vw, 1.9rem);
+  line-height: 1.2;
+  color: var(--color-primario);
+  text-wrap: balance;
+}
+
+.btn-salir {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 48px;
+  padding: 0.5rem 1.1rem;
+  background: #ffffff;
+  color: var(--color-primario);
+  font-weight: bold;
+  text-decoration: none;
+  border: 3px solid var(--color-primario);
+  border-radius: 50px;
+  transition: background-color var(--transicion), color var(--transicion);
+}
+
+.btn-salir:hover,
+.btn-salir:focus-visible {
+  background: var(--color-primario);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   2. DISEÑO EN DOS COLUMNAS: MI RUTA + LECCIÓN (CSS GRID)
+   -------------------------------------------------------------------------- */
+.player {
+  display: grid;
+  grid-template-columns: minmax(250px, 320px) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.escena {
+  min-width: 0; /* Evita que el video o la tabla ensanchen la columna */
+}
+
+/* --------------------------------------------------------------------------
+   3. MI RUTA (menú lateral)
+   -------------------------------------------------------------------------- */
+.ruta {
+  position: sticky;
+  top: 1rem;
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+  padding: 1.25rem;
+}
+
+.ruta h2 {
+  font-family: var(--fuente-titulos);
+  font-size: 1.4rem;
+  color: var(--color-primario);
+  margin-bottom: 0.75rem;
+}
+
+/* Sello pequeño: "Curso en progreso" / "Curso completado" */
+.ruta-insignia {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 50px;
+  background: #e0e7ff;
+  color: #1e3a8a;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.ruta-insignia[data-completo="si"] {
+  background: #dcfce7;
+  color: #14532d;
+}
+
+.ruta-insignia[data-completo="si"]::before {
+  content: "✓ ";
+}
+
+.ruta-progreso {
+  display: grid;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.ruta-progreso progress {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 14px;
+  border: 0;
+  border-radius: 99px;
+  overflow: hidden;
+  background: #e2e8f0;
+  accent-color: var(--color-secundario);
+}
+
+.ruta-progreso progress::-webkit-progress-bar {
+  background: #e2e8f0;
+}
+
+.ruta-progreso progress::-webkit-progress-value {
+  background: #15803d;
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+.ruta-progreso progress::-moz-progress-bar {
+  background: #15803d;
+  border-radius: 99px;
+}
+
+.ruta-progreso-texto {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--color-texto-suave);
+}
+
+/* Botón que abre/cierra la ruta (solo se ve en celulares) */
+.ruta-toggle {
+  display: none;
+  width: 100%;
+  min-height: 52px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-primario);
+  color: #ffffff;
+  font-family: var(--fuente-cuerpo);
+  font-size: 1.05rem;
+  font-weight: bold;
+  border: 0;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.ruta-toggle::after {
+  content: "▾";
+  font-size: 1.3rem;
+  transition: transform var(--transicion);
+}
+
+.ruta-toggle[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+.ruta-toggle:focus-visible {
+  outline-color: var(--color-foco-sobre-oscuro);
+}
+
+/* Lista de paradas */
+.ruta-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ruta-lista li {
+  position: relative;
+}
+
+/* Línea punteada que une una parada con la siguiente */
+.ruta-lista li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 29px;
+  top: 58px;
+  bottom: -8px;
+  border-left: 4px dotted #94a3b8;
+}
+
+.ruta-lista li:has(.ruta-item[data-estado="completo"]):not(:last-child)::after,
+.ruta-lista li:has(.ruta-item[data-estado="actual-completo"]):not(:last-child)::after {
+  border-left: 4px solid #15803d;
+}
+
+.ruta-item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  width: 100%;
+  min-height: 64px;
+  margin-bottom: 0.9rem;
+  padding: 0.55rem 0.7rem;
+  background: #ffffff;
+  color: var(--color-texto);
+  font-family: var(--fuente-cuerpo);
+  font-size: 1rem;
+  text-align: left;
+  border: 3px solid #e2e8f0;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: border-color var(--transicion), background-color var(--transicion);
+}
+
+.ruta-item[data-estado="actual"],
+.ruta-item[data-estado="actual-completo"],
+.ruta-item[data-estado="bloqueado"] {
+  background: #ffffff;
+}
+
+@media (hover: hover) {
+  .ruta-item:not([aria-disabled="true"]):hover {
+    border-color: var(--color-primario);
+    background: #eff6ff;
+  }
+}
+
+/* La parada (círculo) */
+.ruta-item .nodo {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 4px solid #64748b;
+  color: #334155;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.ruta-texto {
+  display: grid;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.ruta-num {
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-texto-suave);
+}
+
+.ruta-nombre {
+  font-family: var(--fuente-titulos);
+  font-weight: bold;
+  line-height: 1.2;
+  color: var(--color-primario);
+}
+
+.ruta-estado {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--color-texto-suave);
+}
+
+/* ---- Estados (siempre color + icono + texto, nunca solo color) ---- */
+.ruta-item[data-estado="actual"],
+.ruta-item[data-estado="actual-completo"] {
+  background: #ffffff;
+  border-color: var(--color-primario);
+}
+
+.ruta-item[data-estado="actual"] .nodo {
+  border-color: var(--color-primario);
+  background: var(--color-primario);
+  color: #ffffff;
+  animation: ruta-pulso 1.8s ease-out infinite;
+}
+
+.ruta-item[data-estado="completo"] .nodo,
+.ruta-item[data-estado="actual-completo"] .nodo {
+  border-color: #15803d;
+  background: #15803d;
+  color: #ffffff;
+  font-size: 0; /* Oculta el número: se dibuja el chulito */
+}
+
+.ruta-item[data-estado="completo"] .nodo::before,
+.ruta-item[data-estado="actual-completo"] .nodo::before {
+  content: "✓";
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.ruta-item[data-estado="completo"] .ruta-estado,
+.ruta-item[data-estado="actual-completo"] .ruta-estado {
+  color: #14532d;
+}
+
+.ruta-item[data-estado="bloqueado"] {
+  cursor: not-allowed;
+  background: #ffffff;
+}
+
+.ruta-item[data-estado="bloqueado"] .nodo {
+  border-style: dashed;
+  border-color: #94a3b8;
+  color: #475569;
+  font-size: 0;
+}
+
+.ruta-item[data-estado="bloqueado"] .nodo::before {
+  content: "🔒";
+  font-size: 1.1rem;
+}
+
+.ruta-item[data-estado="bloqueado"] .ruta-nombre {
+  color: #475569;
+}
+
+@keyframes ruta-pulso {
+  0%   { box-shadow: 0 0 0 0 rgba(13, 71, 161, 0.45); }
+  100% { box-shadow: 0 0 0 14px rgba(13, 71, 161, 0); }
+}
+
+/* --------------------------------------------------------------------------
+   4. LECCIÓN Y SUS PARTES
+   -------------------------------------------------------------------------- */
+.paso {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.07);
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.paso[hidden],
+.bloque[hidden],
+.curso-completo[hidden],
+.paso-control [hidden] {
+  display: none !important;
+}
+
+.paso > h2 {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.5rem, 4.5vw, 2rem);
+  line-height: 1.2;
+  color: var(--color-primario);
+  margin: 0.4rem 0 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  text-wrap: balance;
+}
+
+.paso > h2:focus {
+  outline: 3px solid var(--color-foco);
+  outline-offset: 6px;
+}
+
+.bloque {
+  margin-bottom: 1.25rem;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.035);
+}
+
+.bloque > h3 {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  line-height: 1.35;
+  color: var(--color-primario);
+  margin-bottom: 1rem;
+}
+
+.bloque > h3:focus {
+  outline: 3px solid var(--color-foco);
+  outline-offset: 4px;
+}
+
+/* Cuando JavaScript está activo, cada parte nueva aparece suavemente */
+.js-activo .bloque:not([hidden]) {
+  animation: bloque-entra 0.45s ease-out;
+}
+
+@keyframes bloque-entra {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.bloque .video-contenedor {
+  margin-bottom: 0.75rem;
+}
+
+.bloque .caja-grafica {
+  margin: 0;
+}
+
+.bloque .lectura {
+  max-width: 62ch;
+}
+
+/* --------------------------------------------------------------------------
+   5. BOTÓN GRANDE "CONTINUAR"
+   -------------------------------------------------------------------------- */
+.paso-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 3px dotted #cbd5e1;
+}
+
+.paso-ayuda {
+  flex: 1 1 260px;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  color: var(--color-texto);
+  font-weight: bold;
+}
+
+.btn-continuar {
+  margin-top: 0;
+  align-self: auto;
+  padding-inline: 1.75rem;
+  border-radius: 50px;
+  font-size: 1.15rem;
+}
+
+/* --------------------------------------------------------------------------
+   6. PANTALLA FINAL: CURSO COMPLETADO (con sello y chulito grande)
+   -------------------------------------------------------------------------- */
+.curso-completo {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 24px;
+  border: 4px solid #15803d;
+  box-shadow: 0 12px 32px rgba(21, 128, 61, 0.2);
+  padding: clamp(1.5rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+  animation: quiz-pop 0.6s ease-out;
+}
+
+.sello {
+  display: grid;
+  place-items: center;
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: #15803d;
+  color: #ffffff;
+  font-size: 4.5rem;
+  line-height: 1;
+  border: 8px double #bbf7d0;
+  transform: rotate(-6deg);
+}
+
+.curso-completo h2 {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.7rem, 5vw, 2.4rem);
+  color: #14532d;
+  margin-bottom: 0.5rem;
+  text-wrap: balance;
+}
+
+.curso-completo h2:focus {
+  outline: 4px dashed var(--color-foco);
+  outline-offset: 6px;
+}
+
+.curso-completo p {
+  max-width: 50ch;
+  margin: 0 auto 1.25rem;
+}
+
+.curso-completo .btn-principal {
+  align-self: auto;
+  margin-top: 0;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   7. ADAPTACIÓN A CELULARES Y TABLETAS
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .player {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ruta {
+    position: static;
+    padding: 0.9rem;
+  }
+
+  .ruta h2,
+  .ruta-insignia {
+    display: none;
+  }
+
+  .ruta-progreso {
+    margin-bottom: 0.9rem;
+  }
+
+  .js-activo .ruta-toggle {
+    display: flex;
+  }
+
+  .js-activo .ruta-lista {
+    margin-top: 1rem;
+  }
+
+  .js-activo .ruta-lista[data-abierta="false"] {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .paso-control {
+    justify-content: stretch;
+  }
+
+  .btn-continuar {
+    width: 100%;
+  }
+
+  .bloque {
+    padding: 0.85rem;
+  }
+
+  .barra-curso {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. PREFERENCIAS DEL USUARIO
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .ruta-item .nodo,
+  .js-activo .bloque:not([hidden]),
+  .curso-completo {
+    animation: none !important;
+  }
+}
+
+@media (forced-colors: active) {
+  .ruta-item,
+  .bloque,
+  .paso,
+  .ruta-item .nodo {
+    border: 2px solid CanvasText;
+  }
+
+  .ruta-item[data-estado="actual"],
+  .ruta-item[data-estado="actual-completo"] {
+    border-width: 4px;
+  }
+}
+
+@media print {
+  .ruta,
+  .paso-control,
+  .barra-curso {
+    display: none;
+  }
+
+  .paso,
+  .bloque {
+    display: block !important;
+    box-shadow: none;
+  }
+}
+
+/* Sin JavaScript no hay reproductor: se muestra todo el contenido en orden */
+.player:not(.js-activo) .ruta {
+  display: none;
+}
+
+.player:not(.js-activo) .paso {
+  margin-bottom: 1.5rem;
+}

@@ -1,0 +1,384 @@
+/* ==========================================================================
+   MINIACAD - HOJA DE ESTILOS PRINCIPAL
+   Cumple con los 12 requisitos técnicos de CSS y accesibilidad WCAG AA
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES CSS EN :root (Paleta WCAG AA, tipografía y medidas)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Colores principales (contraste superior a 4.5:1 con texto blanco) */
+  --color-primario: #0d47a1;       /* Azul marino profundo */
+  --color-primario-hover: #1565c0; /* Azul interactivo */
+  --color-secundario: #1b5e20;     /* Verde oscuro para botones de éxito */
+  --color-secundario-hover: #2e7d32;
+  --color-accento: #b71c1c;        /* Rojo oscuro para alertas/detalles */
+
+  /* Fondos y tarjetas */
+  --color-fondo: #ffffff;
+  --color-tarjeta: #ffffff;
+  --color-borde: #d1d5db;
+
+  /* Texto y foco */
+  --color-texto: #111827;
+  --color-texto-suave: #374151;
+  --color-foco: #bf360c;           /* Naranja oscuro: 5:1 con blanco, visible sobre fondos claros */
+  --color-foco-sobre-oscuro: #ffe082; /* Amarillo para foco dentro de header/footer azules */
+
+  /* Tipografías (mínimo 18px en cuerpo, requisito infantil) */
+  --fuente-titulos: "Trebuchet MS", Arial, sans-serif;
+  --fuente-cuerpo: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --tamano-cuerpo: 1.125rem;       /* 18px */
+
+  /* Medidas reutilizables */
+  --radio: 12px;
+  --radio-pequeno: 8px;
+  --ancho-maximo: 1200px;
+  --sombra-suave: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --sombra-hover: 0 10px 20px rgba(0, 0, 0, 0.12);
+  --transicion: 0.2s ease;
+}
+
+/* --------------------------------------------------------------------------
+   2. REINICIO MÍNIMO Y MODELO DE CAJA
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Requisito: modelo de caja */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--tamano-cuerpo);
+  line-height: 1.6;
+  min-height: 100vh;
+  min-height: 100dvh; /* Evita saltos con la barra del navegador móvil */
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Mantiene el footer al final */
+}
+
+#contenido-principal,
+#contenido-curso,
+#contenido-ia {
+  scroll-margin-block-start: 1rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   3. ACCESIBILIDAD Y FOCO TECLADO (WCAG AA)
+   -------------------------------------------------------------------------- */
+/* Enlace de salto rápido para teclado y lector de pantalla */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  background: var(--color-foco);
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  font-weight: bold;
+  z-index: 9999;
+  text-decoration: none;
+  border-radius: 0 0 var(--radio-pequeno) var(--radio-pequeno);
+  transform: translateY(-120%);
+  transition: transform var(--transicion);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Foco visible claro para navegación con TAB */
+:focus-visible {
+  outline: 4px solid var(--color-foco);
+  outline-offset: 3px;
+}
+
+/* Sobre fondos azules, el foco naranja pierde contraste: se usa amarillo */
+header :focus-visible,
+footer :focus-visible {
+  outline-color: var(--color-foco-sobre-oscuro);
+}
+
+/* --------------------------------------------------------------------------
+   4. ENCABEZADO Y NAVEGACIÓN (FLEXBOX)
+   -------------------------------------------------------------------------- */
+header {
+  background-color: var(--color-primario);
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  box-shadow: var(--sombra-suave);
+}
+
+.header-container {
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  display: flex; /* FLEXBOX */
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* En pantallas pequeñas el menú baja en vez de desbordarse */
+  gap: 0.75rem 1.5rem;
+}
+
+.logo-sitio {
+  font-family: var(--fuente-titulos);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-principal ul {
+  display: flex; /* FLEXBOX */
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 0.5rem 1.5rem;
+}
+
+.nav-principal a {
+  display: inline-block;
+  min-height: 44px; /* Área táctil recomendada */
+  line-height: 28px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.35rem 1rem;
+  border-radius: 6px;
+  transition: background-color var(--transicion); /* Transición */
+}
+
+.nav-principal a:hover,
+.nav-principal a:focus-visible {
+  background-color: var(--color-primario-hover);
+}
+
+.nav-principal a[aria-current="page"] {
+  border-bottom: 4px solid #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   5. CATÁLOGO Y SECCIONES (CSS GRID)
+   -------------------------------------------------------------------------- */
+.hero {
+  text-align: center;
+  padding: clamp(2rem, 6vw, 3rem) 1.5rem;
+  background-color: var(--color-tarjeta);
+  border-bottom: 3px solid var(--color-borde);
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.75rem, 5vw, 2.5rem); /* Tamaño fluido */
+  color: var(--color-primario);
+  margin-bottom: 0.75rem;
+  text-wrap: balance;
+}
+
+.hero p {
+  max-width: 60ch; /* Línea cómoda de leer */
+  margin: 0 auto;
+}
+
+.catalogo-seccion {
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.catalogo-seccion h2 {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 1.5rem;
+  color: var(--color-texto);
+}
+
+.grid-cursos {
+  display: grid; /* CSS GRID */
+  grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr));
+  gap: 1.75rem;
+}
+
+/* Tarjetas de curso */
+.tarjeta-curso {
+  background-color: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  transition: transform var(--transicion), box-shadow var(--transicion),
+              border-color var(--transicion); /* Transición */
+}
+
+/* Alterna suavemente el borde para ayudar a distinguir las tarjetas en la cuadrícula. */
+.grid-cursos > .tarjeta-curso:nth-child(even) {
+  border-color: #b8c5d6;
+}
+
+/* El hover solo se activa en dispositivos con puntero real (no en táctiles) */
+@media (hover: hover) {
+  .tarjeta-curso:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-hover);
+  }
+}
+
+/* Resalta la tarjeta completa cuando su botón recibe foco con teclado */
+.tarjeta-curso:focus-within {
+  border-color: var(--color-primario);
+  box-shadow: var(--sombra-hover);
+}
+
+.tarjeta-curso img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  border-radius: 14px;
+  margin-bottom: 1.25rem;
+  padding: 0.25rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+.tarjeta-curso h3 {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.45rem, 2.4vw, 1.75rem);
+  line-height: 1.25;
+  color: var(--color-primario);
+  margin-bottom: 0.5rem;
+  text-wrap: balance;
+}
+
+.tarjeta-curso p {
+  color: var(--color-texto-suave);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Botones principales */
+.btn-principal {
+  display: inline-block;
+  margin-top: auto;       /* Todos los botones quedan alineados abajo */
+  align-self: flex-start;
+  min-height: 48px;       /* Área táctil cómoda para niños */
+  background-color: var(--color-secundario);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radio-pequeno);
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color var(--transicion), transform var(--transicion);
+}
+
+.btn-principal:hover,
+.btn-principal:focus-visible {
+  background-color: var(--color-secundario-hover);
+}
+
+.btn-principal:active {
+  transform: scale(0.97);
+}
+
+/* --------------------------------------------------------------------------
+   6. PIE DE PÁGINA (FOOTER)
+   -------------------------------------------------------------------------- */
+footer {
+  background-color: var(--color-primario);
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  margin-top: auto;
+}
+
+footer p + p {
+  margin-top: 0.5rem;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+footer a:hover,
+footer a:focus-visible {
+  color: var(--color-foco-sobre-oscuro);
+}
+
+/* --------------------------------------------------------------------------
+   7. PREFERENCIAS DEL USUARIO Y MODOS ESPECIALES
+   -------------------------------------------------------------------------- */
+/* Respeta a quien pide menos movimiento en su sistema */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+
+  .tarjeta-curso:hover {
+    transform: none;
+  }
+}
+
+/* Modo de alto contraste de Windows: asegura bordes y foco visibles */
+@media (forced-colors: active) {
+  .tarjeta-curso,
+  .btn-principal {
+    border: 2px solid CanvasText;
+  }
+
+  :focus-visible {
+    outline-color: Highlight;
+  }
+}
+
+/* Impresión: sin colores de fondo ni elementos de navegación */
+@media print {
+  header,
+  footer,
+  .skip-link,
+  .btn-principal {
+    display: none;
+  }
+
+  body {
+    background: #ffffff;
+    font-size: 12pt;
+  }
+
+  .tarjeta-curso {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+}

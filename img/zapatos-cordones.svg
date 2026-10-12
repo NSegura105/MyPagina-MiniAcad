@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Pasos para amarrar los cordones</title>
+  <desc id="descripcion">Tres ilustraciones muestran el nudo base, dos bucles cruzados y el lazo terminado.</desc>
+  <rect width="760" height="360" rx="28" fill="#fff"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle" fill="#183153">
+    <text x="380" y="48" font-size="25" font-weight="700">El método de las orejitas</text>
+    <text x="125" y="310" font-size="18" font-weight="700">1. Nudo base</text>
+    <text x="380" y="310" font-size="18" font-weight="700">2. Cruza los bucles</text>
+    <text x="635" y="310" font-size="18" font-weight="700">3. Ajusta el lazo</text>
+  </g>
+  <g fill="none" stroke="#2563eb" stroke-linecap="round" stroke-linejoin="round" stroke-width="12">
+    <path d="M70 205c30-4 36-51 74-55 25-3 24 50 7 63-17 13-26-7-10-18 19-13 45-23 72-21"/>
+    <path d="M320 210c28-45 14-76-2-82-18-8-34 18-26 42 10 29 42 28 61 5 18-24 17-55 1-48-15 7-3 47 13 61 21 18 48 17 75 5"/>
+    <path d="M567 207c17-22 44-47 63-43 20 5 16 28-1 37-17 8-38 6-52-7 12-14 34-28 50-27 18 2 20 24 2 33-18 9-39 7-52-6"/>
+  </g>
+  <g fill="#d9e8ff" stroke="#183153" stroke-width="5">
+    <path d="M54 244h163l-20 33H79c-18 0-27-15-25-33z"/>
+    <path d="M309 244h163l-20 33h-118c-18 0-27-15-25-33z"/>
+    <path d="M564 244h163l-20 33H589c-18 0-27-15-25-33z"/>
+  </g>
+  <g fill="none" stroke="#183153" stroke-linecap="round" stroke-width="4">
+    <path d="M115 232l18 10 18-10 18 10"/><path d="M370 232l18 10 18-10 18 10"/><path d="M625 232l18 10 18-10 18 10"/>
+  </g>
+</svg>

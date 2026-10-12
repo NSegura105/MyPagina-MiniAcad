@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendo a sumar - MiniAcad</title>
+    <meta name="description" content="Curso para niños: aprende a sumar con un video, dibujos y ejercicios divertidos.">
+    <meta name="theme-color" content="#0d47a1">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/responsivo.css">
+    <link rel="stylesheet" href="../css/curso.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+    <link rel="stylesheet" href="../css/player.css">
+</head>
+<body>
+
+    <a href="#contenido-curso" class="skip-link">Saltar al contenido del curso</a>
+
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo-sitio" aria-label="MiniAcad, ir al inicio">MiniAcad</a>
+            <nav class="nav-principal" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../aprendizaje.html">Mi aprendizaje</a></li>
+                    <li><a href="../IA.html">Uso de IA</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- FONDO DEL CURSO (se define en css/curso.css) -->
+    <div class="curso-bg-wrapper fondo-sumas">
+        <main id="contenido-curso" class="contenido-curso contenido-player" tabindex="-1">
+
+            <!-- BARRA SUPERIOR: título del curso y botón para salir -->
+            <div class="barra-curso">
+                <h1 id="titulo-curso">¡Aprendo a Sumar! <span aria-hidden="true">➕</span></h1>
+                <a href="../aprendizaje.html" class="btn-salir"><span aria-hidden="true">←</span> Salir del curso</a>
+            </div>
+
+            <div class="player" data-player>
+
+                <!-- ============ MI RUTA (menú lateral del curso) ============ -->
+                <aside class="ruta" aria-labelledby="titulo-ruta">
+                    <h2 id="titulo-ruta">Mi ruta <span aria-hidden="true">🧭</span></h2>
+                    <p class="ruta-insignia">Curso en progreso</p>
+
+                    <button type="button" class="ruta-toggle" aria-expanded="false" aria-controls="ruta-lista">
+                        <span class="ruta-toggle-texto">Mi ruta</span>
+                    </button>
+
+                    <div class="ruta-progreso">
+                        <progress max="3" value="0" aria-label="Lecciones completadas">0 de 3</progress>
+                        <p class="ruta-progreso-texto">0 de 3 lecciones completadas</p>
+                    </div>
+
+                    <ol class="ruta-lista" id="ruta-lista" data-abierta="true" aria-label="Lecciones del curso">
+                        <li>
+                            <button type="button" class="ruta-item" data-paso="0">
+                                <span class="nodo" aria-hidden="true">1</span>
+                                <span class="ruta-texto">
+                                    <span class="ruta-num">Lección 1</span>
+                                    <span class="ruta-nombre">¿Qué significa sumar?</span>
+                                    <span class="ruta-estado"></span>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="ruta-item" data-paso="1">
+                                <span class="nodo" aria-hidden="true">2</span>
+                                <span class="ruta-texto">
+                                    <span class="ruta-num">Lección 2</span>
+                                    <span class="ruta-nombre">Sumar con dibujos</span>
+                                    <span class="ruta-estado"></span>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="ruta-item" data-paso="2">
+                                <span class="nodo" aria-hidden="true">3</span>
+                                <span class="ruta-texto">
+                                    <span class="ruta-num">Lección 3</span>
+                                    <span class="ruta-nombre">Práctica</span>
+                                    <span class="ruta-estado"></span>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="ruta-item" data-final>
+                                <span class="nodo" aria-hidden="true">🏁</span>
+                                <span class="ruta-texto">
+                                    <span class="ruta-num">Al terminar</span>
+                                    <span class="ruta-nombre">Fin del curso</span>
+                                    <span class="ruta-estado"></span>
+                                </span>
+                            </button>
+                        </li>
+                    </ol>
+                </aside>
+
+                <!-- ============ LECCIÓN ACTUAL ============ -->
+                <div class="escena">
+                    <p class="player-anuncio solo-lectores" aria-live="polite"></p>
+
+                    <section class="paso" id="leccion-1" aria-labelledby="titulo-leccion-1">
+                        <span class="step-badge">Lección 1 de 3</span>
+                        <h2 id="titulo-leccion-1" tabindex="-1">¿Qué significa sumar? <span aria-hidden="true">🤔</span></h2>
+
+                        <div class="bloque" data-titulo="Video">
+                            <h3>Mira el video <span aria-hidden="true">🎥</span></h3>
+                            <div class="video-contenedor">
+                                <iframe
+                                    src="https://www.youtube.com/embed/oexd_Dfic_Q?rel=0&amp;cc_load_policy=1&amp;hl=es&amp;cc_lang_pref=es"
+                                    title="Aprendiendo a sumar. La Suma - Videos educativos para niños de primaria"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    loading="lazy"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="nota-video">
+                                ¿No puedes ver el video? Lee la lectura: explica lo mismo con palabras.
+                                <a href="https://www.youtube.com/watch?v=oexd_Dfic_Q">Ver el video en YouTube.</a>
+                            </p>
+                        </div>
+                        <div class="bloque" data-titulo="Lectura">
+                            <h3>¡Juntar todo en un solo grupo! <span aria-hidden="true">📖</span></h3>
+                            <div class="caja-leccion caja-texto">
+                                <p class="lectura">
+                                    Sumar es <strong>reunir, agrupar o añadir</strong> cosas. Si tienes algunas cosas y le sumas más, el grupo final es más grande. El signo <strong>+</strong> se lee “más” y nos indica que debemos contar todo junto para saber el total. Por ejemplo: tienes 1 círculo y te dan 2 círculos más. Los juntas y cuentas: uno, dos, tres. Entonces 1 + 2 = 3. El signo <strong>=</strong> se lee “igual” y nos muestra el resultado.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bloque" data-titulo="Imagen">
+                            <h3>Observa el ejemplo <span aria-hidden="true">🖼️</span></h3>
+                            <figure class="caja-leccion caja-grafica">
+                                <figcaption>Una manzana más dos manzanas son tres manzanas</figcaption>
+                                <img src="../img/sumar-circulos.svg" width="500" height="260" loading="lazy" decoding="async"
+                                     alt="Dos círculos más un círculo forman tres círculos.">
+                            </figure>
+                        </div>
+                    </section>
+
+                    <section class="paso" id="leccion-2" aria-labelledby="titulo-leccion-2">
+                        <span class="step-badge">Lección 2 de 3</span>
+                        <h2 id="titulo-leccion-2" tabindex="-1">Sumar con dibujos <span aria-hidden="true">🍎</span></h2>
+
+                        <div class="bloque" data-titulo="Video">
+                            <h3>Repasa cómo sumar <span aria-hidden="true">🎥</span></h3>
+                            <div class="video-contenedor">
+                                <iframe
+                                    src="https://www.youtube.com/embed/oexd_Dfic_Q?rel=0&amp;cc_load_policy=1&amp;hl=es&amp;cc_lang_pref=es"
+                                    title="Video de apoyo: aprendiendo a sumar"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    loading="lazy"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="nota-video">
+                                También puedes aprender con la lectura y el dibujo de esta lección.
+                                <a href="https://www.youtube.com/watch?v=oexd_Dfic_Q">Ver el video en YouTube.</a>
+                            </p>
+                        </div>
+                        <div class="bloque" data-titulo="Imagen">
+                            <h3>Mira el dibujo <span aria-hidden="true">🖼️</span></h3>
+                            <figure class="caja-leccion caja-grafica">
+                                <figcaption>Tres manzanas más dos manzanas son cinco manzanas</figcaption>
+                                <img src="../img/sumar-manzanas.svg" width="600" height="300" loading="lazy" decoding="async"
+                                     alt="Dibujo de un grupo de 3 manzanas rojas, el signo más, un grupo de 2 manzanas rojas, el signo igual y un grupo de 5 manzanas rojas.">
+                            </figure>
+                        </div>
+                        <div class="bloque" data-titulo="Lectura">
+                            <h3>Cuenta con tus manos <span aria-hidden="true">📖</span></h3>
+                            <div class="caja-leccion caja-texto">
+                                <p class="lectura">
+                                    Puedes sumar con dibujos, con juguetes o con los dedos. Mira el ejemplo: hay 3 manzanas en un cesto y 2 manzanas en otro. Las juntamos todas en un solo grupo. Contamos: una, dos, tres, cuatro, cinco. Hay 5 manzanas. Lo escribimos así: 3 + 2 = 5. Cuando sumes, cuenta siempre con calma. Empieza por el número más grande y sigue contando desde ahí. ¡Es un buen truco para sumar más rápido!
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="paso" id="leccion-3" aria-labelledby="titulo-leccion-3">
+                        <span class="step-badge">Lección 3 de 3</span>
+                        <h2 id="titulo-leccion-3" tabindex="-1">Práctica <span aria-hidden="true">🏆</span></h2>
+
+                        <div class="bloque" data-titulo="Video">
+                            <h3>Repasa antes de practicar <span aria-hidden="true">🎥</span></h3>
+                            <div class="video-contenedor">
+                                <iframe
+                                    src="https://www.youtube.com/embed/oexd_Dfic_Q?rel=0&amp;cc_load_policy=1&amp;hl=es&amp;cc_lang_pref=es"
+                                    title="Video de repaso: aprendiendo a sumar"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    loading="lazy"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="nota-video">
+                                La lectura y el dibujo también explican cómo juntar cantidades.
+                                <a href="https://www.youtube.com/watch?v=oexd_Dfic_Q">Ver el video en YouTube.</a>
+                            </p>
+                        </div>
+                        <div class="bloque" data-titulo="Lectura">
+                            <h3>Ahora te toca a ti <span aria-hidden="true">📖</span></h3>
+                            <div class="caja-leccion caja-texto">
+                                <p class="lectura">
+                                    ¡Ya sabes sumar! Ahora practica con 6 preguntas. Mira el dibujo, junta las cosas, cuéntalas y elige tu respuesta. Si aciertas 4 o más, ¡apruebas! Si te equivocas, no pasa nada. Verás la respuesta correcta y podrás intentarlo otra vez.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bloque" data-titulo="Imagen">
+                            <h3>Recuerda cómo juntar cantidades <span aria-hidden="true">🖼️</span></h3>
+                            <figure class="caja-leccion caja-grafica">
+                                <figcaption>Un círculo más dos círculos forman tres círculos.</figcaption>
+                                <img src="../img/sumar-circulos.svg" width="500" height="260" loading="lazy" decoding="async"
+                                     alt="Un círculo se junta con otros dos círculos para formar un grupo de tres.">
+                            </figure>
+                        </div>
+                        <div class="bloque quiz-card" data-titulo="Práctica">
+                            <h3 id="titulo-quiz" tabindex="-1">Práctica: ¡demuestra lo que aprendiste! <span aria-hidden="true">🏆</span></h3>
+                            <p class="quiz-intro">Responde las 6 preguntas. Si aciertas 4 o más, ¡apruebas la lección!</p>
+                            <noscript>
+                                <p class="quiz-sin-js">Para responder la evaluación necesitas activar JavaScript en tu navegador.</p>
+                            </noscript>
+                            <!-- La evaluación se dibuja aquí con js/quiz.js usando los datos de abajo -->
+                            <div id="quiz" data-quiz></div>
+                            <script type="application/json" id="quiz-datos">
+                            {
+                                "aprueba": 4,
+                                "foco": "titulo-quiz",
+                                "felicitacion": "¡Felicitaciones! Ya sabes sumar. Tu lección tiene su chulito.",
+                                "repaso": {
+                                    "paso": 0,
+                                    "texto": "Repasar la lección 1"
+                                },
+                                "preguntas": [
+                                    {
+                                        "dibujo": "🍎🍎 + 🍎",
+                                        "pregunta": "¿Cuánto es 2 + 1?",
+                                        "opciones": [
+                                            "2",
+                                            "3",
+                                            "4"
+                                        ],
+                                        "correcta": 1,
+                                        "explicacion": "Juntamos 2 manzanas con 1 manzana y quedan 3."
+                                    },
+                                    {
+                                        "dibujo": "⭐⭐⭐ + ⭐⭐",
+                                        "pregunta": "¿Cuánto es 3 + 2?",
+                                        "opciones": [
+                                            "4",
+                                            "5",
+                                            "6"
+                                        ],
+                                        "correcta": 1,
+                                        "explicacion": "Juntamos 3 estrellas con 2 estrellas y quedan 5."
+                                    },
+                                    {
+                                        "dibujo": "🐟🐟🐟🐟 + 🐟🐟🐟🐟",
+                                        "pregunta": "¿Cuánto es 4 + 4?",
+                                        "opciones": [
+                                            "7",
+                                            "8",
+                                            "9"
+                                        ],
+                                        "correcta": 1,
+                                        "explicacion": "Juntamos 4 peces con otros 4 peces y quedan 8."
+                                    },
+                                    {
+                                        "dibujo": "➕",
+                                        "pregunta": "¿Qué símbolo usamos para sumar?",
+                                        "opciones": [
+                                            "− menos",
+                                            "+ más",
+                                            "= igual"
+                                        ],
+                                        "correcta": 1,
+                                        "explicacion": "El signo + significa más: juntamos las cantidades."
+                                    },
+                                    {
+                                        "dibujo": "🍬🍬🍬🍬🍬 + 🍬🍬🍬",
+                                        "pregunta": "Tengo 5 caramelos y mi mamá me regala 3 más. ¿Cuántos caramelos tengo?",
+                                        "opciones": [
+                                            "7",
+                                            "8",
+                                            "9"
+                                        ],
+                                        "correcta": 1,
+                                        "explicacion": "5 caramelos y 3 caramelos más son 8 caramelos."
+                                    },
+                                    {
+                                        "dibujo": "🚗🚗🚗🚗🚗🚗 + 🚗🚗🚗",
+                                        "pregunta": "¿Cuánto es 6 + 3?",
+                                        "opciones": [
+                                            "8",
+                                            "9",
+                                            "10"
+                                        ],
+                                        "correcta": 1,
+                                        "explicacion": "6 carros y 3 carros más son 9 carros."
+                                    }
+                                ]
+                            }
+                            </script>
+                        </div>
+                    </section>
+
+                    <!-- ============ PANTALLA FINAL ============ -->
+                    <section class="curso-completo" aria-labelledby="titulo-final" hidden>
+                        <div class="sello" aria-hidden="true">✓</div>
+                        <h2 id="titulo-final" tabindex="-1">¡Completaste el curso!</h2>
+                        <p>Viste todas las lecciones y aprobaste la práctica. ¡Ya sabes sumar! Cuando quieras, sal del curso y elige otro en Mi aprendizaje.</p>
+                        <a href="../aprendizaje.html" class="btn-principal">Salir del curso</a>
+                    </section>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MiniAcad · Proyecto de CSS Essentials (Cisco Networking Academy)</p>
+        <p><a href="../IA.html">Documentación del uso de Inteligencia Artificial</a></p>
+    </footer>
+
+    <script src="../js/script.js" defer></script>
+    <script src="../js/curso.js" defer></script>
+    <script src="../js/quiz.js" defer></script>
+</body>
+</html>

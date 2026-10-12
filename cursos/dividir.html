@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendo a dividir - MiniAcad</title>
+    <meta name="description" content="Curso para niños: aprende a dividir repartiendo objetos en partes iguales, con videos, dibujos y una práctica.">
+    <meta name="theme-color" content="#0d47a1">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/responsivo.css">
+    <link rel="stylesheet" href="../css/curso.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+    <link rel="stylesheet" href="../css/player.css">
+</head>
+<body>
+
+    <a href="#contenido-curso" class="skip-link">Saltar al contenido del curso</a>
+
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo-sitio" aria-label="MiniAcad, ir al inicio">MiniAcad</a>
+            <nav class="nav-principal" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../aprendizaje.html">Mi aprendizaje</a></li>
+                    <li><a href="../IA.html">Uso de IA</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- FONDO DEL CURSO (se define en css/curso.css) -->
+    <div class="curso-bg-wrapper fondo-division">
+        <main id="contenido-curso" class="contenido-curso contenido-player" tabindex="-1">
+
+            <!-- BARRA SUPERIOR: título del curso y botón para salir -->
+            <div class="barra-curso">
+                <h1 id="titulo-curso">¡Aprendo a Dividir! <span aria-hidden="true">➗</span></h1>
+                <a href="../aprendizaje.html" class="btn-salir"><span aria-hidden="true">←</span> Salir del curso</a>
+            </div>
+
+            <div class="player" data-player>
+
+                <!-- ============ MI RUTA (menú lateral del curso) ============ -->
+                <aside class="ruta" aria-labelledby="titulo-ruta">
+                    <h2 id="titulo-ruta">Mi ruta <span aria-hidden="true">🧭</span></h2>
+                    <p class="ruta-insignia">Curso en progreso</p>
+
+                    <button type="button" class="ruta-toggle" aria-expanded="false" aria-controls="ruta-lista">
+                        <span class="ruta-toggle-texto">Mi ruta</span>
+                    </button>
+
+                    <div class="ruta-progreso">
+                        <progress max="3" value="0" aria-label="Lecciones completadas">0 de 3</progress>
+                        <p class="ruta-progreso-texto">0 de 3 lecciones completadas</p>
+                    </div>
+
+                    <ol class="ruta-lista" id="ruta-lista" data-abierta="true" aria-label="Lecciones del curso">
+                        <li>
+                            <button type="button" class="ruta-item" data-paso="0">
+                                <span class="nodo" aria-hidden="true">1</span>
+                                <span class="ruta-texto">
+                                    <span class="ruta-num">Lección 1</span>
+                                    <span class="ruta-nombre">Repartir en partes iguales</span>
+                                    <span class="ruta-estado"></span>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="ruta-item" data-paso="1">
+                                <span class="nodo" aria-hidden="true">2</span>
+                                <span class="ruta-texto">
+                                    <span class="ruta-num">Lección 2</span>
+                                    <span class="ruta-nombre">La división con objetos</span>
+                                    <span class="ruta-estado"></span>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="ruta-item" data-paso="2">
+                                <span class="nodo" aria-hidden="true">3</span>
+                                <span class="ruta-texto">
+                                    <span class="ruta-num">Lección 3</span>
+                                    <span class="ruta-nombre">Práctica</span>
+                                    <span class="ruta-estado"></span>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="ruta-item" data-final>
+                                <span class="nodo" aria-hidden="true">🏁</span>
+                                <span class="ruta-texto">
+                                    <span class="ruta-num">Al terminar</span>
+                                    <span class="ruta-nombre">Fin del curso</span>
+                                    <span class="ruta-estado"></span>
+                                </span>
+                            </button>
+                        </li>
+                    </ol>
+                </aside>
+
+                <!-- ============ LECCIÓN ACTUAL ============ -->
+                <div class="escena">
+                    <p class="player-anuncio solo-lectores" aria-live="polite"></p>
+
+                    <section class="paso" id="leccion-1" aria-labelledby="titulo-leccion-1">
+                        <span class="step-badge">Lección 1 de 3</span>
+                        <h2 id="titulo-leccion-1" tabindex="-1">Repartir en partes iguales <span aria-hidden="true">🍪</span></h2>
+
+                        <div class="bloque" data-titulo="Video">
+                            <h3>Mira el video <span aria-hidden="true">🎥</span></h3>
+                            <div class="video-contenedor">
+                                <iframe
+                                    src="https://www.youtube.com/embed/zF4GYIbSMzg?rel=0&amp;cc_load_policy=1&amp;hl=es&amp;cc_lang_pref=es"
+                                    title="La división: aprende a dividir con nuestros amigos los monos (Smile and Learn)"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    loading="lazy"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="nota-video">
+                                ¿No puedes ver el video? Lee la lectura: explica lo mismo con palabras.
+                                <a href="https://www.youtube.com/watch?v=zF4GYIbSMzg">Ver el video en YouTube.</a>
+                            </p>
+                        </div>
+                        <div class="bloque" data-titulo="Lectura">
+                            <h3>¡Dividir es repartir! <span aria-hidden="true">📖</span></h3>
+                            <div class="caja-leccion caja-texto">
+                                <p class="lectura">
+                                    Imagina que tienes 6 galletas y 2 amigos. Quieres que cada amigo reciba lo mismo. Das una galleta a uno y una galleta al otro. Repites hasta que no queden galletas. Cada amigo recibe 3 galletas. Eso es repartir en <strong>partes iguales</strong>. Partes iguales quiere decir que todos reciben la misma cantidad. Nadie recibe más y nadie recibe menos. Para dividir usamos este signo: <strong>÷</strong>. Lo escribimos así: 6 ÷ 2 = 3.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bloque" data-titulo="Imagen">
+                            <h3>Observa cómo se reparten <span aria-hidden="true">🖼️</span></h3>
+                            <figure class="caja-leccion caja-grafica">
+                                <figcaption>Seis galletas repartidas en dos platos: 6 ÷ 2 = 3</figcaption>
+                                <img src="../img/dividir-galletas.svg" width="760" height="360" loading="lazy" decoding="async"
+                                     alt="Seis galletas repartidas por igual entre dos platos dejan tres galletas en cada plato.">
+                            </figure>
+                        </div>
+                    </section>
+
+                    <section class="paso" id="leccion-2" aria-labelledby="titulo-leccion-2">
+                        <span class="step-badge">Lección 2 de 3</span>
+                        <h2 id="titulo-leccion-2" tabindex="-1">La división con objetos <span aria-hidden="true">🍎</span></h2>
+
+                        <div class="bloque" data-titulo="Video">
+                            <h3>Mira el video <span aria-hidden="true">🎥</span></h3>
+                            <div class="video-contenedor">
+                                <iframe
+                                    src="https://www.youtube.com/embed/iA0fP4tL67s?rel=0&amp;cc_load_policy=1&amp;hl=es&amp;cc_lang_pref=es"
+                                    title="Aprendiendo a dividir. La división (Happy Learning)"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    loading="lazy"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="nota-video">
+                                ¿No puedes ver el video? Lee la lectura: explica lo mismo con palabras.
+                                <a href="https://www.youtube.com/watch?v=iA0fP4tL67s">Ver el video en YouTube.</a>
+                            </p>
+                        </div>
+                        <div class="bloque" data-titulo="Lectura">
+                            <h3>Divide con lo que tengas a mano <span aria-hidden="true">📖</span></h3>
+                            <div class="caja-leccion caja-texto">
+                                <p class="lectura">
+                                    Puedes dividir con manzanas, lápices o juguetes. Mira este ejemplo. Tienes 8 manzanas y 4 cestas. Pones 2 manzanas en cada cesta. No sobra ninguna manzana y todas las cestas tienen lo mismo. Lo escribimos así: 8 ÷ 4 = 2. El resultado nos dice cuántos hay en cada grupo. Tú también puedes hacerlo en casa. Haz grupos iguales con tus juguetes y cuenta cuántos hay en cada grupo.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bloque" data-titulo="Imagen">
+                            <h3>Observa los grupos <span aria-hidden="true">🖼️</span></h3>
+                            <figure class="caja-leccion caja-grafica">
+                                <figcaption>Ocho manzanas repartidas en cuatro cestas</figcaption>
+                                <img src="../img/dividir-manzanas.svg" width="760" height="360" loading="lazy" decoding="async"
+                                     alt="Cuatro cestas tienen dos manzanas cada una. Ocho manzanas repartidas entre cuatro cestas dan dos manzanas por cesta.">
+                            </figure>
+                        </div>
+                    </section>
+
+                    <section class="paso" id="leccion-3" aria-labelledby="titulo-leccion-3">
+                        <span class="step-badge">Lección 3 de 3</span>
+                        <h2 id="titulo-leccion-3" tabindex="-1">Práctica <span aria-hidden="true">🏆</span></h2>
+
+                        <div class="bloque" data-titulo="Video">
+                            <h3>Mira el video <span aria-hidden="true">🎥</span></h3>
+                            <div class="video-contenedor">
+                                <iframe
+                                    src="https://www.youtube.com/embed/gS1o2HoEF44?rel=0&amp;cc_load_policy=1&amp;hl=es&amp;cc_lang_pref=es"
+                                    title="La división: aprendamos a dividir, video educativo para niños (Aprende con Tía Viviana)"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    loading="lazy"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="nota-video">
+                                ¿No puedes ver el video? Lee la lectura: explica lo mismo con palabras.
+                                <a href="https://www.youtube.com/watch?v=gS1o2HoEF44">Ver el video en YouTube.</a>
+                            </p>
+                        </div>
+                        <div class="bloque" data-titulo="Lectura">
+                            <h3>Ahora te toca a ti <span aria-hidden="true">📖</span></h3>
+                            <div class="caja-leccion caja-texto">
+                                <p class="lectura">
+                                    ¡Ya sabes dividir! Ahora practica con 6 preguntas. Mira el dibujo, piensa cuántos hay en cada grupo y elige tu respuesta. Si aciertas 4 o más, ¡apruebas! Si te equivocas, no pasa nada. Verás la respuesta correcta y podrás intentarlo otra vez.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bloque" data-titulo="Imagen">
+                            <h3>Repasa el reparto <span aria-hidden="true">🖼️</span></h3>
+                            <figure class="caja-leccion caja-grafica">
+                                <figcaption>Cuatro cestas reciben dos manzanas cada una: 8 ÷ 4 = 2</figcaption>
+                                <img src="../img/dividir-manzanas.svg" width="760" height="360" loading="lazy" decoding="async"
+                                     alt="Cuatro cestas tienen dos manzanas cada una: ocho dividido entre cuatro es dos.">
+                            </figure>
+                        </div>
+                        <div class="bloque quiz-card" data-titulo="Práctica">
+                            <h3 id="titulo-quiz" tabindex="-1">Práctica: ¡demuestra lo que aprendiste! <span aria-hidden="true">🏆</span></h3>
+                            <p class="quiz-intro">Responde las 6 preguntas. Si aciertas 4 o más, ¡apruebas la lección!</p>
+                            <noscript>
+                                <p class="quiz-sin-js">Para responder la evaluación necesitas activar JavaScript en tu navegador.</p>
+                            </noscript>
+                            <!-- La evaluación se dibuja aquí con js/quiz.js usando los datos de abajo -->
+                            <div id="quiz" data-quiz></div>
+                            <script type="application/json" id="quiz-datos">
+                            {
+                                "aprueba": 4,
+                                "foco": "titulo-quiz",
+                                "felicitacion": "¡Felicitaciones! Ya sabes dividir. Tu lección tiene su chulito.",
+                                "repaso": {
+                                    "paso": 0,
+                                    "texto": "Repasar la lección 1"
+                                },
+                                "preguntas": [
+                                    {
+                                        "dibujo": "🍪🍪🍪🍪 ÷ 2",
+                                        "pregunta": "Tengo 4 galletas y las reparto entre 2 amigos en partes iguales. ¿Cuántas galletas recibe cada uno?",
+                                        "opciones": [
+                                            "1",
+                                            "2",
+                                            "3"
+                                        ],
+                                        "correcta": 1,
+                                        "explicacion": "4 galletas entre 2 amigos son 2 galletas para cada uno."
+                                    },
+                                    {
+                                        "dibujo": "🍎🍎🍎🍎🍎🍎 ÷ 2",
+                                        "pregunta": "¿Cuánto es 6 ÷ 2?",
+                                        "opciones": [
+                                            "2",
+                                            "3",
+                                            "4"
+                                        ],
+                                        "correcta": 1,
+                                        "explicacion": "6 manzanas en 2 grupos iguales son 3 manzanas en cada grupo."
+                                    },
+                                    {
+                                        "dibujo": "🎈🎈🎈🎈🎈🎈🎈🎈 ÷ 4",
+                                        "pregunta": "¿Cuánto es 8 ÷ 4?",
+                                        "opciones": [
+                                            "2",
+                                            "3",
+                                            "4"
+                                        ],
+                                        "correcta": 0,
+                                        "explicacion": "8 globos en 4 grupos iguales son 2 globos en cada grupo."
+                                    },
+                                    {
+                                        "dibujo": "➗",
+                                        "pregunta": "¿Qué signo usamos para dividir?",
+                                        "opciones": [
+                                            "+ sumar",
+                                            "÷ dividir",
+                                            "= igual"
+                                        ],
+                                        "correcta": 1,
+                                        "explicacion": "El signo ÷ nos dice que hay que repartir."
+                                    },
+                                    {
+                                        "dibujo": "🍬🍬🍬🍬🍬🍬🍬🍬🍬 ÷ 3",
+                                        "pregunta": "Tengo 9 caramelos para 3 niños. ¿Cuántos caramelos recibe cada niño?",
+                                        "opciones": [
+                                            "2",
+                                            "3",
+                                            "4"
+                                        ],
+                                        "correcta": 1,
+                                        "explicacion": "9 caramelos entre 3 niños son 3 caramelos para cada niño."
+                                    },
+                                    {
+                                        "dibujo": "🚗🚗🚗🚗🚗🚗🚗🚗🚗🚗🚗🚗 ÷ 3",
+                                        "pregunta": "¿Cuánto es 12 ÷ 3?",
+                                        "opciones": [
+                                            "3",
+                                            "4",
+                                            "6"
+                                        ],
+                                        "correcta": 1,
+                                        "explicacion": "12 carros en 3 filas iguales son 4 carros en cada fila."
+                                    }
+                                ]
+                            }
+                            </script>
+                        </div>
+                    </section>
+
+                    <!-- ============ PANTALLA FINAL ============ -->
+                    <section class="curso-completo" aria-labelledby="titulo-final" hidden>
+                        <div class="sello" aria-hidden="true">✓</div>
+                        <h2 id="titulo-final" tabindex="-1">¡Completaste el curso!</h2>
+                        <p>Viste todas las lecciones y aprobaste la práctica. ¡Ya sabes repartir en partes iguales! Cuando quieras, sal del curso y elige otro en Mi aprendizaje.</p>
+                        <a href="../aprendizaje.html" class="btn-principal">Salir del curso</a>
+                    </section>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MiniAcad · Proyecto de CSS Essentials (Cisco Networking Academy)</p>
+        <p><a href="../IA.html">Documentación del uso de Inteligencia Artificial</a></p>
+    </footer>
+
+    <script src="../js/script.js" defer></script>
+    <script src="../js/curso.js" defer></script>
+    <script src="../js/quiz.js" defer></script>
+</body>
+</html>

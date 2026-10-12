@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendo a amarrarme los zapatos - MiniAcad</title>
+    <meta name="description" content="Aprende a amarrarte los zapatos paso a paso con el método de las orejitas de conejo.">
+    <meta name="theme-color" content="#0d47a1">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/responsivo.css">
+    <link rel="stylesheet" href="../css/curso.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+    <link rel="stylesheet" href="../css/player.css">
+</head>
+<body>
+
+    <a href="#contenido-curso" class="skip-link">Saltar al contenido del curso</a>
+
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo-sitio" aria-label="MiniAcad, ir al inicio">MiniAcad</a>
+            <nav class="nav-principal" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../aprendizaje.html">Mi aprendizaje</a></li>
+                    <li><a href="../IA.html">Uso de IA</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="curso-bg-wrapper fondo-zapatos">
+        <main id="contenido-curso" class="contenido-curso contenido-player" tabindex="-1">
+
+            <div class="barra-curso">
+                <h1 id="titulo-curso">¡Aprendo a amarrarme los zapatos! <span aria-hidden="true">👟</span></h1>
+                <a href="../aprendizaje.html" class="btn-salir"><span aria-hidden="true">←</span> Salir del curso</a>
+            </div>
+
+            <div class="player" data-player>
+                <aside class="ruta" aria-labelledby="titulo-ruta">
+                    <h2 id="titulo-ruta">Mi ruta <span aria-hidden="true">🧭</span></h2>
+                    <p class="ruta-insignia">Curso en progreso</p>
+                    <button type="button" class="ruta-toggle" aria-expanded="false" aria-controls="ruta-lista">
+                        <span class="ruta-toggle-texto">Mi ruta</span>
+                    </button>
+                    <div class="ruta-progreso">
+                        <progress max="3" value="0" aria-label="Lecciones completadas">0 de 3</progress>
+                        <p class="ruta-progreso-texto">0 de 3 lecciones completadas</p>
+                    </div>
+                    <ol class="ruta-lista" id="ruta-lista" data-abierta="true" aria-label="Lecciones del curso">
+                        <li><button type="button" class="ruta-item" data-paso="0">
+                            <span class="nodo" aria-hidden="true">1</span>
+                            <span class="ruta-texto"><span class="ruta-num">Lección 1</span><span class="ruta-nombre">Partes del cordón</span><span class="ruta-estado"></span></span>
+                        </button></li>
+                        <li><button type="button" class="ruta-item" data-paso="1">
+                            <span class="nodo" aria-hidden="true">2</span>
+                            <span class="ruta-texto"><span class="ruta-num">Lección 2</span><span class="ruta-nombre">El nudo base</span><span class="ruta-estado"></span></span>
+                        </button></li>
+                        <li><button type="button" class="ruta-item" data-paso="2">
+                            <span class="nodo" aria-hidden="true">3</span>
+                            <span class="ruta-texto"><span class="ruta-num">Lección 3</span><span class="ruta-nombre">Las dos orejas de conejo</span><span class="ruta-estado"></span></span>
+                        </button></li>
+                        <li><button type="button" class="ruta-item" data-final>
+                            <span class="nodo" aria-hidden="true">🏁</span>
+                            <span class="ruta-texto"><span class="ruta-num">Al terminar</span><span class="ruta-nombre">Fin del curso</span><span class="ruta-estado"></span></span>
+                        </button></li>
+                    </ol>
+                </aside>
+
+                <div class="escena">
+                    <p class="player-anuncio solo-lectores" aria-live="polite"></p>
+
+                    <section class="paso" id="leccion-1" aria-labelledby="titulo-leccion-1">
+                        <span class="step-badge">Lección 1 de 3</span>
+                        <h2 id="titulo-leccion-1" tabindex="-1">Partes del cordón <span aria-hidden="true">👟</span></h2>
+                        <div class="bloque" data-titulo="Video">
+                            <h3>Mira el video guía <span aria-hidden="true">🎥</span></h3>
+                            <div class="video-contenedor">
+                                <iframe
+                                    src="https://www.youtube.com/embed/S437q8fPkyg?rel=0&amp;cc_load_policy=1&amp;hl=es&amp;cc_lang_pref=es"
+                                    title="Cómo atarse los cordones de los zapatos para niños"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    loading="lazy"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="nota-video">
+                                ¿No puedes ver el video? Lee las instrucciones de esta lección.
+                                <a href="https://www.youtube.com/watch?v=S437q8fPkyg">Ver el video en YouTube.</a>
+                            </p>
+                        </div>
+                        <div class="bloque" data-titulo="Lectura">
+                            <h3>Conoce tu zapato y sus cordones <span aria-hidden="true">📖</span></h3>
+                            <div class="caja-leccion caja-texto">
+                                <p class="lectura">El cordón es la tira que pasa por los agujeros del zapato, llamados ojales. Sus puntas suelen tener una pieza pequeña que ayuda a pasar el cordón. Hay un cordón a cada lado. Antes de empezar, siéntate y apoya bien el zapato en el suelo.</p>
+                                <p class="nota-simbolo"><span class="nota-titulo">Consejo:</span> <span class="nota-texto">Pide ayuda a una persona adulta si tus cordones están muy apretados.</span></p>
+                            </div>
+                        </div>
+                        <div class="bloque" data-titulo="Recuerda">
+                            <h3>La X del nudo</h3>
+                            <figure class="caja-leccion caja-grafica">
+                                <figcaption>Identifica el cordón, sus puntas y los ojales del zapato.</figcaption>
+                                <img src="../img/partes-cordon.svg" width="760" height="360" loading="lazy" decoding="async"
+                                     alt="Dibujo de un zapato con cordón. Las etiquetas señalan los ojales, el cordón y sus puntas.">
+                            </figure>
+                        </div>
+                    </section>
+
+                    <section class="paso" id="leccion-2" aria-labelledby="titulo-leccion-2">
+                        <span class="step-badge">Lección 2 de 3</span>
+                        <h2 id="titulo-leccion-2" tabindex="-1">El nudo base <span aria-hidden="true">👟</span></h2>
+                        <div class="bloque" data-titulo="Video">
+                            <h3>Mira cómo hacer el nudo base <span aria-hidden="true">🎥</span></h3>
+                            <div class="video-contenedor">
+                                <iframe
+                                    src="https://www.youtube.com/embed/S437q8fPkyg?rel=0&amp;cc_load_policy=1&amp;hl=es&amp;cc_lang_pref=es"
+                                    title="Video de apoyo para aprender el nudo base de los cordones"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    loading="lazy"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="nota-video">
+                                Sigue también los pasos escritos y el dibujo de esta lección.
+                                <a href="https://www.youtube.com/watch?v=S437q8fPkyg">Ver el video en YouTube.</a>
+                            </p>
+                        </div>
+                        <div class="bloque" data-titulo="Forma los bucles">
+                            <h3>Cruza los cordones <span aria-hidden="true">📖</span></h3>
+                            <div class="caja-leccion caja-texto">
+                                <p class="lectura">Toma un cordón con cada mano. Cruza uno sobre el otro para formar una X. Pasa una punta por debajo del cruce y tira de ambas puntas hacia los lados. Así haces el nudo base, que mantiene el zapato sujeto.</p>
+                            </div>
+                        </div>
+                        <div class="bloque" data-titulo="Cruza y pasa">
+                            <h3>Revisa que el nudo esté firme <span aria-hidden="true">🔄</span></h3>
+                            <div class="caja-leccion caja-texto">
+                                <ol>
+                                    <li>Apoya el zapato para que no se mueva.</li>
+                                    <li>Sujeta una punta en cada mano.</li>
+                                    <li>Jala suavemente hasta que el nudo quede firme, sin apretar demasiado.</li>
+                                </ol>
+                                <p class="lectura">Si el nudo queda flojo, vuelve a intentarlo con calma. Practicar varias veces ayuda a que tus dedos aprendan.</p>
+                            </div>
+                        </div>
+                        <div class="bloque" data-titulo="Repasa los pasos">
+                            <h3>Recuerda el orden</h3>
+                            <figure class="caja-leccion caja-grafica">
+                                <figcaption>Nudo base, dos bucles, cruzar y apretar.</figcaption>
+                                <img src="../img/zapatos-cordones.svg" width="760" height="360" loading="lazy" decoding="async"
+                                     alt="Repaso ilustrado de los pasos para amarrar los cordones.">
+                            </figure>
+                        </div>
+                    </section>
+
+                    <section class="paso" id="leccion-3" aria-labelledby="titulo-leccion-3">
+                        <span class="step-badge">Lección 3 de 3</span>
+                        <h2 id="titulo-leccion-3" tabindex="-1">Las dos orejas de conejo <span aria-hidden="true">🐰</span></h2>
+                        <div class="bloque" data-titulo="Video">
+                            <h3>Mira cómo formar el lazo <span aria-hidden="true">🎥</span></h3>
+                            <div class="video-contenedor">
+                                <iframe
+                                    src="https://www.youtube.com/embed/S437q8fPkyg?rel=0&amp;cc_load_policy=1&amp;hl=es&amp;cc_lang_pref=es"
+                                    title="Video de apoyo: cómo atarse los cordones de los zapatos"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    loading="lazy"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="nota-video">
+                                También puedes leer los pasos y practicar con calma.
+                                <a href="https://www.youtube.com/watch?v=S437q8fPkyg">Ver el video en YouTube.</a>
+                            </p>
+                        </div>
+                        <div class="bloque" data-titulo="Antes de empezar">
+                            <h3>Piensa en lo que aprendiste <span aria-hidden="true">📖</span></h3>
+                            <div class="caja-leccion caja-texto">
+                                <p class="lectura">Después del nudo base, dobla cada cordón para formar un bucle. Sujeta un bucle en cada mano: son las dos orejas de conejo. Crúzalas, pasa una por el espacio y tira de ambas con cuidado. Luego responde las preguntas para repasar lo aprendido.</p>
+                            </div>
+                        </div>
+                        <div class="bloque" data-titulo="Imagen">
+                            <h3>Repasa los pasos del lazo <span aria-hidden="true">🖼️</span></h3>
+                            <figure class="caja-leccion caja-grafica">
+                                <figcaption>Forma dos bucles, crúzalos y tira con cuidado.</figcaption>
+                                <img src="../img/zapatos-cordones.svg" width="760" height="360" loading="lazy" decoding="async"
+                                     alt="Secuencia ilustrada para formar dos bucles, cruzarlos y terminar el lazo del zapato.">
+                            </figure>
+                        </div>
+                        <div class="bloque quiz-card" data-titulo="Práctica">
+                            <h3 id="titulo-quiz" tabindex="-1">Práctica: amarra tus ideas <span aria-hidden="true">🎀</span></h3>
+                            <p class="quiz-intro">Elige una respuesta para cada pregunta. ¡Tú puedes!</p>
+                            <noscript><p class="quiz-sin-js">Para responder la evaluación necesitas activar JavaScript en tu navegador.</p></noscript>
+                            <div id="quiz" data-quiz></div>
+                            <script type="application/json" id="quiz-datos">
+                            {
+                                "aprueba": 4,
+                                "foco": "titulo-quiz",
+                                "felicitacion": "¡Felicitaciones! Ya aprendiste a amarrarte los zapatos. Tu lección tiene su chulito.",
+                                "repaso": {
+                                    "paso": 0,
+                                    "texto": "Repasar cómo hacer el nudo base"
+                                },
+                                "preguntas": [
+                                    {
+                                        "dibujo": "〰️ ❌ 〰️",
+                                        "pregunta": "¿Qué haces primero con los dos cordones?",
+                                        "opciones": ["Los cruzo formando una X", "Los escondo dentro del zapato", "Los corto"],
+                                        "correcta": 0,
+                                        "explicacion": "Cruzar los cordones es el primer paso para hacer el nudo base."
+                                    },
+                                    {
+                                        "dibujo": "🐰🐰",
+                                        "pregunta": "¿Qué forman los dos bucles?",
+                                        "opciones": ["Dos orejitas", "Dos botones", "Dos bolsillos"],
+                                        "correcta": 0,
+                                        "explicacion": "Los bucles se parecen a las orejas de un conejo."
+                                    },
+                                    {
+                                        "dibujo": "🔄",
+                                        "pregunta": "Después de formar las orejitas, ¿qué haces?",
+                                        "opciones": ["Las cruzo", "Las suelto y me voy", "Las mojo"],
+                                        "correcta": 0,
+                                        "explicacion": "Cruza las orejitas antes de pasar una por el espacio."
+                                    },
+                                    {
+                                        "dibujo": "🎀",
+                                        "pregunta": "¿Cómo terminas el lazo?",
+                                        "opciones": ["Jalo las dos orejitas hacia los lados", "Tiro de una sola punta", "Desato el nudo base"],
+                                        "correcta": 0,
+                                        "explicacion": "Jalar las dos orejitas ayuda a que el lazo quede firme."
+                                    },
+                                    {
+                                        "dibujo": "👟",
+                                        "pregunta": "¿Qué puedes hacer si no te sale a la primera?",
+                                        "opciones": ["Intentarlo de nuevo con calma", "Dejar de practicar para siempre", "Jalar muy fuerte"],
+                                        "correcta": 0,
+                                        "explicacion": "Practicar con paciencia hace que cada vez sea más fácil."
+                                    }
+                                ]
+                            }
+                            </script>
+                        </div>
+                    </section>
+
+                    <section class="curso-completo" aria-labelledby="titulo-final" hidden>
+                        <div class="sello" aria-hidden="true">✓</div>
+                        <h2 id="titulo-final" tabindex="-1">¡Completaste el curso!</h2>
+                        <p>Terminaste las lecciones y aprobaste la práctica. ¡Ya puedes amarrarte los zapatos! Cuando quieras, elige otro curso en Mi aprendizaje.</p>
+                        <a href="../aprendizaje.html" class="btn-principal">Salir del curso</a>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MiniAcad · Proyecto de CSS Essentials (Cisco Networking Academy)</p>
+        <p><a href="../IA.html">Documentación del uso de Inteligencia Artificial</a></p>
+    </footer>
+
+    <script src="../js/script.js" defer></script>
+    <script src="../js/curso.js" defer></script>
+    <script src="../js/quiz.js" defer></script>
+</body>
+</html>

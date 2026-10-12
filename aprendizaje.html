@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi aprendizaje - MiniAcad</title>
+    <meta name="description" content="Mi aprendizaje: todos tus cursos de MiniAcad reunidos en un solo lugar.">
+    <meta name="theme-color" content="#0d47a1">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <link rel="stylesheet" href="css/inicio.css">
+</head>
+<body>
+
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-sitio" aria-label="MiniAcad, ir al inicio">MiniAcad</a>
+            <nav class="nav-principal" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="aprendizaje.html" aria-current="page">Mi aprendizaje</a></li>
+                    <li><a href="IA.html">Uso de IA</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido-principal" tabindex="-1">
+
+        <div class="encabezado-aprendizaje">
+            <div>
+                <h1>Mi aprendizaje <span aria-hidden="true">🎒</span></h1>
+                <p>Elige un curso para descubrir conceptos nuevos y practicar con actividades interactivas.</p>
+            </div>
+        </div>
+
+        <div class="aprendizaje-contenedor">
+            <section aria-labelledby="titulo-cursos">
+                <h2 id="titulo-cursos">Mis cursos</h2>
+                <div class="grid-cursos">
+
+                <article class="tarjeta-curso" aria-labelledby="curso-sumar">
+                    <img
+                        src="img/sumar-1-2-3.png"
+                        width="600" height="470"
+                        loading="eager" decoding="async"
+                        alt="Ilustración del ejercicio 1 más 2 es igual a 3">
+                    <h3 id="curso-sumar">Aprendo a sumar</h3>
+                    <p>Descubre lo fácil y divertido que es juntar números y objetos.</p>
+                    <ul class="datos-curso" aria-label="Datos del curso">
+                        <li>3 lecciones</li>
+                        <li>Video, dibujos y práctica</li>
+                    </ul>
+                    <a href="cursos/sumar.html" class="btn-principal" id="enlace-sumar" aria-labelledby="enlace-sumar curso-sumar">
+                        Entrar al curso
+                    </a>
+                </article>
+
+                <article class="tarjeta-curso" aria-labelledby="curso-dividir">
+                    <img
+                        src="img/division.png"
+                        width="1365" height="768"
+                        loading="lazy" decoding="async"
+                        alt="Ilustración de la división larga con sus términos: dividendo, divisor, cociente y residuo">
+                    <h3 id="curso-dividir">Aprendo a dividir</h3>
+                    <p>Aprende a repartir tus juguetes y dulces en partes iguales.</p>
+                    <ul class="datos-curso" aria-label="Datos del curso">
+                        <li>3 lecciones</li>
+                        <li>Video, dibujos y práctica</li>
+                    </ul>
+                    <a href="cursos/dividir.html" class="btn-principal" id="enlace-dividir" aria-labelledby="enlace-dividir curso-dividir">
+                        Entrar al curso
+                    </a>
+                </article>
+
+                <article class="tarjeta-curso" aria-labelledby="curso-zapatos">
+                    <img
+                        src="img/amarrar-zapatos.png"
+                        width="1152" height="768"
+                        loading="lazy" decoding="async"
+                        alt="Ilustración de un zapato deportivo con sus cordones cruzados">
+                    <h3 id="curso-zapatos">Aprendo a amarrarme los zapatos</h3>
+                    <p>Domina el nudo base y las orejas de conejo paso a paso.</p>
+                    <ul class="datos-curso" aria-label="Datos del curso">
+                        <li>3 lecciones</li>
+                        <li>Video, instrucciones y práctica</li>
+                    </ul>
+                    <a href="cursos/zapatos.html" class="btn-principal" id="enlace-zapatos" aria-labelledby="enlace-zapatos curso-zapatos">
+                        Entrar al curso
+                    </a>
+                </article>
+
+                <article class="tarjeta-curso" aria-labelledby="curso-internet-seguro">
+                    <img
+                        src="img/seguridad-internet.png"
+                        width="1152" height="768"
+                        loading="lazy" decoding="async"
+                        alt="Ilustración sobre internet seguro, contraseñas y protección contra virus">
+                    <h3 id="curso-internet-seguro">Me cuido en internet</h3>
+                    <p>Consejos sencillos para navegar seguro y cuidar tu privacidad.</p>
+                    <ul class="datos-curso" aria-label="Datos del curso">
+                        <li>3 lecciones</li>
+                        <li>Video, consejos y práctica</li>
+                    </ul>
+                    <a href="cursos/internet-seguro.html" class="btn-principal" id="enlace-internet-seguro" aria-labelledby="enlace-internet-seguro curso-internet-seguro">
+                        Entrar al curso
+                    </a>
+                </article>
+
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MiniAcad · Proyecto de CSS Essentials (Cisco Networking Academy)</p>
+        <p><a href="IA.html">Documentación del uso de Inteligencia Artificial</a></p>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
